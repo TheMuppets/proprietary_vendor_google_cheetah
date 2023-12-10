@@ -1,0 +1,13 @@
+# When enabling on a device, SELinux policies need to be added for the driver
+# binary. Android startup services should run in their own SELinux domain.
+# https://source.android.com/security/selinux/device-policy#label_new_services_and_address_denials
+service gxp_logging /vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging
+    class late_start
+    user system
+    group system
+on boot
+    chown system system /sys/class/gxp/gxp/device/dsp_usage_0
+    chown system system /sys/class/gxp/gxp/device/dsp_usage_1
+    chown system system /sys/class/gxp/gxp/device/dsp_usage_2
+    chown system system /sys/class/gxp/gxp/device/preempt_count
+    chown system system /sys/class/gxp/gxp/device/context_switch_count

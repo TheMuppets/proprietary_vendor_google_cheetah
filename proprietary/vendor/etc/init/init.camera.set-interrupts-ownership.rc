@@ -1,0 +1,2 @@
+on boot
+    exec_background -- /vendor/bin/init.camera.set-interrupts-ownership

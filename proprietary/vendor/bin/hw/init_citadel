@@ -1,0 +1,261 @@
+#!/vendor/bin/sh
+#
+# Copyright 2020 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# This script automates Dauntless firmware updates
+#
+# We use the name "dauntless" in the source for clarity, but keep "citadel" on
+# the target so we don't have to change all the factory scripts.
+
+set -u
+
+# There are multiple pre-production images, so we have to pick the right one
+FWDIR=/vendor/firmware/dauntless
+
+# Update tool
+UPDATER=/vendor/bin/hw/citadel_updater
+
+# Log messages to both logcat and the shell
+LOG_TAG=init_citadel
+
+log_info() {
+    log -p i -t "${LOG_TAG}" "$1"
+    echo "$1" >&2
+}
+
+log_error() {
+    log -p e -t "${LOG_TAG}" "$1"
+    echo "$1" >&2
+}
+
+die() {
+    log_error "fatal: $1"
+    exit 1
+}
+
+get_running_version() {
+    # See what's running now
+    log_info "Checking RW firmware version..."
+    version=$(${UPDATER} -vv)
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        log_error "Failed to get RW firmware version"
+        return 1
+    fi
+    log_info "Running RW version: ${version}"
+    echo "$version"
+}
+
+log_ro_version() {
+    log_info "Checking RO firmware version..."
+    version=$(${UPDATER} -l | grep RO_)
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        log_error "Failed to get RO firmware version"
+        return 0
+    fi
+    log_info "${version}"
+}
+
+find_image_file() {
+    version="$1"
+
+    # There are several flavors of dauntless chips and they're all signed
+    # differently. If we have multiple images to choose from, we'll try to pick
+    # the image that matches the running firmware.
+
+    # The -vv option will try to identify the flavor. If it can, it will append
+    # a /FLAVOR string to the version string.
+    flavor=$(echo $version | cut -d/ -f3)
+    # For node-locked images we have to let the chip tell us
+    [[ -z "$flavor" ]] &&
+      flavor=$(${UPDATER} -l | grep Chip | sed -e 's/^.*(//' -e 's/).*//')
+    # Look for a matching image name
+    [[ -n "$flavor" ]] && log_info "Flavor: $flavor" &&
+      [[ -f "$FWDIR/$flavor.ec.bin" ]] &&
+      fwbin="$FWDIR/$flavor.ec.bin"
+    # Look for the default if no flavor known or image available
+    [[ -z "${fwbin:-}" ]] && [[ -f "$FWDIR/ec.bin" ]] &&
+      fwbin="$FWDIR/ec.bin"
+    # Still nothing? That's not right
+    if [[ -z "${fwbin:-}" ]]; then
+        log_info "Couldn't find a firmware image to upload"
+        return 1;
+    fi
+    log_info "Image file: $fwbin"
+    echo "$fwbin"
+}
+
+is_newer_ro() {
+    fwbin="$1"
+
+    file_is_newer=$(${UPDATER} --is_newer_ro "$fwbin")
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        log_error "Failed to compare running RO with file"
+        return 1
+    fi
+
+    log_info "Is RO in file newer: $file_is_newer"
+    echo "$file_is_newer";
+}
+
+is_newer_rw() {
+    fwbin="$1"
+
+    file_is_newer=$(${UPDATER} --is_newer_rw "$fwbin")
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        log_error "Failed to compare running RW with file"
+        return 1
+    fi
+
+    log_info "Is RW in file newer: $file_is_newer"
+    echo "$file_is_newer";
+}
+
+upload_fw() {
+    which="$1"
+    fwbin="$2"
+
+    # Try several times
+    log_info "Uploading firmware..."
+    ${UPDATER} "$which" "${fwbin}" && echo "okay" && return 0
+
+    log_info "Trying again..."
+    ${UPDATER} "$which" "${fwbin}" && echo "okay" && return 0
+
+    log_info "Maybe a forced reset will help"
+    ${UPDATER} --force_reset || log_error "Couldn't force reset the chip"
+    sleep 1
+
+    log_info "Trying once more..."
+    ${UPDATER} "$which" "${fwbin}" && echo "okay" && return 0
+
+    log_error "Nope. Couldn't upload the new firmware."
+    return 1;
+}
+
+# If cryptolib_RO is already provided by the current RO, or the new RW doesn't
+# reequire it, then it's safe to update RW.
+safe_to_update_rw() {
+    fwbin=$1
+
+    # Get epoch.major.minor of the current RO image
+    chip_ver=$(${UPDATER} -l | tr ':/' ' ' | egrep 'R[OW]_[AB].*\*')
+    cur_ro_vers=$(echo "$chip_ver" | awk '/RO_/ {print $3}')
+
+    # RO 0.1.6 (evt) and RO 0.0.6 (proto11) contain RO_CRYPTO
+    # Assume(!) that the minor number will just continue to increment
+    minor=$(echo "$cur_ro_vers" | cut -d. -f3)
+
+    if [[ "$minor" -ge 6 ]] ; then
+        log_info "RO version $cur_ro_vers contains cryptolib"
+        echo "yes"
+        return
+    fi
+
+    # There's no RO crypto currently installed, but do we really need it?
+    # Which RW image are we considering?
+    cur_rw_slot=$(echo "$chip_ver" | awk '/RW_/ {print $1}')
+    new_rw_slot=$(echo "$cur_rw_slot" | tr 'AB' 'BA')
+    # Obtain the new RW version string from the provided image file.
+    file_ver=$(${UPDATER} -f "$fwbin" | tr ':/' ' ')
+    new_rw_vers=$(echo "$file_ver" | awk "/$new_rw_slot/ {print \$3}")
+
+
+    # go/nor/50384 added -r, -l, or -w to the version string
+    # -r means "needs RO_CRYPTO"
+    if [[ "$new_rw_vers" == *-r ]] ; then
+        log_info "New RW firmware $new_rw_vers requires RO cryptolib"
+        echo "no"
+        return
+    fi
+
+    echo "yes"
+}
+
+
+# Let's do this
+log_info "Starting $0"
+
+# What do we know?
+version=$(get_running_version) || die "No running version"
+fwbin=$(find_image_file "$version") || die "No image file"
+do_ro=$(is_newer_ro "$fwbin") || die "No RO comparsion"
+
+# If there's a RO update available, try it first.
+if [[ "$do_ro" = "yes" ]]; then
+
+    log_info "Trying to update RO"
+
+    log_ro_version
+
+    # Upload should succeed
+    upload_fw --ro "$fwbin" || die "RO upload failed"
+
+    # Enable might succeed with default (empty) password
+    if ${UPDATER} --enable_ro '' ; then
+
+        # RO takes effect immediately and will reboot if RW changed too, so
+        # give it some time to happen.
+        sleep 2
+        log_ro_version || die "Can't read version after update"
+
+    else
+        # The user has a PIN/pattern/password set
+        log_info "The primary user will have to enable the update"
+    fi
+fi
+
+# What do we know now?
+version=$(get_running_version) || die "No running version"
+fwbin=$(find_image_file "$version") || die "No image file"
+do_rw=$(is_newer_rw "$fwbin") || die "No RW comparsion"
+
+# If there's a RW update available, try it next
+if [[ "$do_rw" = "yes" ]]; then
+
+    log_info "Trying to update RW"
+
+    # If the new RW requires cryptolib_RO and we don't have it, don't try
+    safe=$(safe_to_update_rw "$fwbin")
+
+    if [[ "$safe" != "yes" ]]; then
+        log_error "Cowardly refusing to update RW right now"
+    else
+        # Upload should succeed
+        upload_fw --rw "$fwbin" || die "RW upload failed"
+
+        # Enable might succeed with default (empty) password
+        if ${UPDATER} --enable_rw '' ; then
+
+            # We need to reboot manually for RW update
+            log_info "RW update enabled, rebooting now"
+            ${UPDATER} --reboot || ${UPDATER} --force_reset || \
+                log_error "can't reboot"
+
+            get_running_version || die "Can't read version after update"
+
+        else
+            # The user has a PIN/pattern/password set
+            log_info "The primary user will have to enable the update"
+        fi
+
+    fi
+fi
+
+log_info "All done"
+exit 0

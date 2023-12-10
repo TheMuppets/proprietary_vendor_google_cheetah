@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright Samsung Electronics Co., LTD.
+ *
+ * This software is proprietary of Samsung Electronics.
+ * No part of this software, either material or conceptual may be copied or distributed, transmitted,
+ * transcribed, stored in a retrieval system or translated into any human or computer language in any form by any means,
+ * electronic, mechanical, manual or otherwise, or disclosed
+ * to third parties without the express written permission of Samsung Electronics.
+ */
+ -->
+<EccTable>
+    <EccEntry mnc="891" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="66" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="115" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="119" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="120" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="122" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="128" category="0" condition="00000001" />
+    <EccEntry mnc="891" number="999" category="0" condition="00000001" />
+
+    <EccEntry mnc="8951" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="8951" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="8951" number="105" category="0" condition="00000001" />
+
+    <EccEntry mnc="8955" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="8955" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="8955" number="190" category="0" condition="00000001" />
+
+    <EccEntry mnc="8956" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="8956" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="8956" number="133" category="0" condition="00000001" />
+
+    <EccEntry mnc="8957" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="8957" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="8957" number="123" category="0" condition="00000001" />
+
+    <EccEntry mnc="8958" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="8958" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="8958" number="171" category="0" condition="00000001" />
+    <EccEntry mnc="8958" number="*1" category="0" condition="00000001" />
+    <EccEntry mnc="8958" number="*171" category="0" condition="00000001" />
+
+    <EccEntry mnc="89502" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="110" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="119" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="120" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="122" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="123" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="125" category="0" condition="00000001" />
+    <EccEntry mnc="89502" number="128" category="0" condition="00000001" />
+
+    <EccEntry mnc="89503" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89503" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89503" number="115" category="0" condition="00000001" />
+    <EccEntry mnc="89503" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="89503" number="122" category="0" condition="00000001" />
+    <EccEntry mnc="89503" number="133" category="0" condition="00000001" />
+
+    <EccEntry mnc="89504" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="100" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="111" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="113" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="116" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="195" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="198" category="0" condition="00000001" />
+    <EccEntry mnc="89504" number="199" category="0" condition="00000001" />
+
+    <EccEntry mnc="89505" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89505" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89505" number="115" category="0" condition="00000001" />
+    <EccEntry mnc="89505" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="89505" number="122" category="0" condition="00000001" />
+    <EccEntry mnc="89505" number="128" category="0" condition="00000001" />
+
+    <EccEntry mnc="89506" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89506" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89506" number="115" category="0" condition="00000001" />
+    <EccEntry mnc="89506" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="89506" number="122" category="0" condition="00000001" />
+
+    <EccEntry mnc="89507" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="103" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="104" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="115" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="118" category="0" condition="00000001" />
+    <EccEntry mnc="89507" number="122" category="0" condition="00000001" />
+
+    <EccEntry mnc="89509" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89509" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89509" number="119" category="0" condition="00000001" />
+    <EccEntry mnc="89509" number="999" category="0" condition="00000001" />
+
+    <EccEntry mnc="89595" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="89595" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="89595" number="101" category="0" condition="00000001" />
+
+    <!-- #R stands for retail -->
+    <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="#R" number="911" category="0" condition="00000001" />
+</EccTable>

@@ -1,0 +1,4 @@
+service edgetpu_app_service /system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
+    class hal
+    user system
+    group system

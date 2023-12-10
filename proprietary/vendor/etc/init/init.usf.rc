@@ -1,0 +1,19 @@
+#
+# Copyright 2020 Google LLC. All Rights Reserved.
+#
+# USF init config file.
+#
+
+on fs
+    # Set the permission of sensor persist folder.
+    chown system system /mnt/vendor/persist/sensors
+    chown system system /mnt/vendor/persist/sensors/registry
+    chmod 750 /mnt/vendor/persist/sensors
+    chmod 750 /mnt/vendor/persist/sensors/registry
+
+on post-fs-data
+    # Create USF registry script save directory.
+    mkdir /data/vendor/sensors 0770 system system
+    mkdir /data/vendor/sensors/registry 0770 system system
+    mkdir /data/vendor/sensors/debug 0770 system system
+

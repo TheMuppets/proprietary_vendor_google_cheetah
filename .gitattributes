@@ -1,3 +1,4 @@
 proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel*/DevicePersonalizationPrebuiltPixel*.apk filter=lfs diff=lfs merge=lfs -text
 proprietary/vendor/apex/com.google.pixel.camera.hal.apex filter=lfs diff=lfs merge=lfs -text
+proprietary/vendor/firmware/stable_modem/modem.bin filter=lfs diff=lfs merge=lfs -text
 radio/* filter=lfs diff=lfs merge=lfs -text

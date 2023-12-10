@@ -1,0 +1,9 @@
+service vendor.face-hal /vendor/bin/hw/android.hardware.biometrics.face-service.22.pixel
+    class late_start
+    user system
+    group system
+    # Inform the system to operate in realtime.
+    task_profiles ProcessCapacityHigh
+    capabilities SYS_NICE
+    rlimit rtprio 10 10
+

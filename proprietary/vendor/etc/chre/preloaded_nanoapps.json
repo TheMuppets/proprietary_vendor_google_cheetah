@@ -1,0 +1,23 @@
+{ "source_dir": "/vendor/etc/chre",
+  "nanoapps": [
+    "activity",
+    "ambient_volume",
+    "ar_bridge",
+    "blue",
+    "capo",
+    "cc",
+    "columbus",
+    "columbus_lite",
+    "drop",
+    "gating",
+    "geofence",
+    "gesture",
+    "health",
+    "imu_cal",
+    "ip_health",
+    "motiondetector",
+    "sd",
+    "smartbatching",
+    "system_signal_hub",
+    "uv_exposure"
+]}

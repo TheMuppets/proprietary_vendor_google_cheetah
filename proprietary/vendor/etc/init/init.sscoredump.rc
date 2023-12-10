@@ -1,0 +1,12 @@
+on post-fs-data
+    mkdir /data/vendor/ssrdump 0771 root system
+    mkdir /data/vendor/ssrdump/coredump 0771 root system
+    restorecon /data/vendor/ssrdump
+    start vendor.sscoredump
+
+service vendor.sscoredump /vendor/bin/sscoredump
+    class main
+    user root
+    group system
+    disabled
+    oneshot

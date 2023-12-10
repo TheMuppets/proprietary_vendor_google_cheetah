@@ -1,0 +1,24 @@
+# When enabling on a device, SELinux policies need to be added for the driver
+# binary. Android startup services should run in their own SELinux domain.
+# https://source.android.com/security/selinux/device-policy#label_new_services_and_address_denials
+service edgetpu_logging /vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging
+    class late_start
+    user system
+    group system
+on boot
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/inference_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/param_cache_hit_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/preempt_depth_max
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/context_preempt_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/outstanding_commands_max
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/tpu_op_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/fw_thread_stats
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/hardware_preempt_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/hardware_ctx_save_time
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/hardware_ctx_save_time_max
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/scalar_fence_wait_time
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/scalar_fence_wait_time_max
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/long_suspend_count
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/suspend_time_max
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/reconfigurations
+    chown system system /sys/class/edgetpu/edgetpu-soc/device/preempt_reconfigurations

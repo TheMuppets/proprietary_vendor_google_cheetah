@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Samsung Electronics Co., Ltd.
+  ~
+  ~ This software is proprietary of Samsung Electronics.
+  ~ No part of this software, either material or conceptual may be copied or
+  ~ distributed, transmitted, transcribed, stored in a retrieval system or
+  ~ translated into any human or computer language in any form by any means,
+  ~ electronic, mechanical, manual or otherwise, or disclosed to third parties
+  ~ without the express written permission of Samsung Electronics.
+  -->
+<permissions>
+    <privapp-permissions package="com.shannon.imsservice">
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <permission name="android.permission.NETWORK_SIGNAL_STRENGTH_WAKEUP"/>
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+        <permission name="android.permission.BIND_IMS_SERVICE"/>
+        <permission name="android.permission.LOCATION_BYPASS"/>
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+        <permission name="android.permission.RENOUNCE_PERMISSIONS"/>
+    </privapp-permissions>
+</permissions>

@@ -1,0 +1,11 @@
+service edgetpu_dba_service /vendor/bin/hw/com.google.edgetpu.dba-service
+    interface aidl com.google.edgetpu.dba.IDevice/default
+    oneshot
+    disabled
+    class hal
+    user system
+    group system
+    rlimit rtprio 99 99
+    capabilities SYS_NICE
+    task_profiles NNApiHALPerformance
+

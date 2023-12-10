@@ -1,0 +1,26 @@
+service vendor.modem_svc_sit /vendor/bin/modem_svc_sit -s
+    class core
+    user radio
+    group system
+
+service vendor.modem_svc_sit_dumpstate /vendor/bin/modem_svc_sit -e -m
+    user radio
+    group system
+    disabled
+    oneshot
+
+# Create file directories for modem svc messages, sorted alphabetically
+on post-fs-data
+    mkdir /data/vendor/radio/modem_temp_file 0775 radio system
+    mkdir /mnt/vendor/modem_userdata/replay 0775 radio system
+
+on property:vendor.modem.crash_detected=1
+    stop vendor.modem_svc_sit
+    setprop vendor.modem.crash_detected 0
+    start vendor.modem_svc_sit
+
+on property:init.svc.dumpstatez=running
+    start vendor.modem_svc_sit_dumpstate
+
+on property:init.svc.bugreportd=running
+    start vendor.modem_svc_sit_dumpstate

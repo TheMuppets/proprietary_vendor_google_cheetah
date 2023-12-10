@@ -1,0 +1,5 @@
+# Initialization scripts for devices that use the Tuscany trusty TA.
+
+on fs
+    # Load the face authentication TA.
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth_p22.app
