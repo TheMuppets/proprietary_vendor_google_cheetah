@@ -7,8 +7,3 @@ service ril-daemon /vendor/bin/hw/rild_exynos
 
 on property:vendor.sys.rild_reset=1
     setprop vendor.sys.rild_reset 0
-    
-on property:vendor.sys.modem_reset=1
-    stop cpboot-daemon
-    setprop vendor.sys.modem_reset 0
-    start cpboot-daemon

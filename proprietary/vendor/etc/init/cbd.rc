@@ -14,6 +14,18 @@ on fs
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYSLOG
     seclabel u:r:cbd:s0
 
+# Binary selection using binary type
+on property:vendor.cbd.modem_reselect=*
+    stop cpboot-daemon
+    setprop vendor.cbd.modem_bin_type ${vendor.cbd.modem_reselect}
+    start cpboot-daemon
+
+on property:vendor.sys.modem_reset=1
+    stop cpboot-daemon
+    setprop vendor.cbd.modem_bin_type 0
+    setprop vendor.sys.modem_reset 0
+    start cpboot-daemon
+
 on property:ro.boot.slot_suffix=*
     setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
 

@@ -8,6 +8,9 @@
     <!-- Allow SCONE JobIntentService & Services to run in background -->
     <allow-in-power-save package="com.google.android.apps.scone" />
 
+    <!-- Prevent bypassing SimLock with power optimizations -->
+    <allow-in-power-save package="com.google.android.apps.work.oobconfig" />
+
     <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
     <allow-in-power-save-except-idle package="com.google.android.flipendo" />
 

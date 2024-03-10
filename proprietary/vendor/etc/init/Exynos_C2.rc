@@ -1,0 +1,3 @@
+on post-fs-data
+    chown mediacodec mediacodec /sys/kernel/vendor_mm/cma/vframe/force_empty
+    chmod 0664 /sys/kernel/vendor_mm/cma/vframe/force_empty

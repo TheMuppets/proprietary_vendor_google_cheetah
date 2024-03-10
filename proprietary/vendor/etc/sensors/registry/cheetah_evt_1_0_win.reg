@@ -62,12 +62,14 @@ reg_script=cheetah_evt_1_0_win.reg
   fifo_max_odr=4000
   fifo_max_wm=245
   fifo_min_wm=1
-  gpio_id=gpio90
 +/dev/lsm6dsv/0/accel
   orientation_transform=-1 -2 3
 +/dev/lsm6dsv/0/gyro
   orientation_transform=-1 -2 3
 +/dev/lsm6dsv/0/temp
++/dev/lsm6dsv/0/motion_detect
++/dev/lsm6dsv/0/stationary_detect
++/dev/lsm6dsv/0/free_fall_detect
 
 # MAG (MMC5633NJ)
 +/dev/mmc56x3x/0

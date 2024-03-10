@@ -1,4 +1,8 @@
-<manifest version="1.0" type="device">
+<!--
+    Input:
+        vendor/google_nos/host/android/hals/keymaster/aidl/strongbox/android.hardware.security.keymint-service.citadel.xml
+-->
+<manifest version="7.0" type="device">
     <hal format="aidl">
         <name>android.hardware.security.keymint</name>
         <version>3</version>
@@ -6,7 +10,6 @@
     </hal>
     <hal format="aidl">
         <name>android.hardware.security.sharedsecret</name>
-        <transport>hwbinder</transport>
         <fqname>ISharedSecret/strongbox</fqname>
     </hal>
 </manifest>

@@ -10,8 +10,8 @@ on early-boot
     chown root system /sys/module/trusty_core/parameters/use_high_wq
     chown system system /dev/goodix_fp
 
-on property:ro.vendor.trusty.storage.fs_ready=1
-    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g7.app
+on property:ro.vendor.trusty.storage.fs_ready=1 && property:ro.vendor.fingerprint.ta.name=*
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/${ro.vendor.fingerprint.ta.name}
     enable vendor.fingerprint-goodix
 
 # Overrides fingerprint antispoof if following persist sysprops are set

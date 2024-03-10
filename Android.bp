@@ -11,6 +11,7 @@ android_app_import {
 	name: "VZWAPNLib",
 	owner: "google",
 	apk: "proprietary/product/app/VZWAPNLib/VZWAPNLib.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -22,6 +23,7 @@ android_app_import {
 	name: "AppDirectedSMSService",
 	owner: "google",
 	apk: "proprietary/product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -34,6 +36,7 @@ android_app_import {
 	name: "CarrierSettings",
 	owner: "google",
 	apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -46,6 +49,7 @@ android_app_import {
 	name: "CarrierWifi",
 	owner: "google",
 	apk: "proprietary/product/priv-app/CarrierWifi/CarrierWifi.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -94,6 +98,7 @@ android_app_import {
 	name: "DeviceIntelligenceNetworkPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -106,6 +111,7 @@ android_app_import {
 	name: "DevicePersonalizationPrebuiltPixel2022",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel2022/DevicePersonalizationPrebuiltPixel2022.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -130,6 +136,7 @@ android_app_import {
 	name: "EuiccGoogle",
 	owner: "google",
 	apk: "proprietary/product/priv-app/EuiccGoogle/EuiccGoogle.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -142,6 +149,7 @@ android_app_import {
 	name: "HardwareInfo",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HardwareInfo/HardwareInfo.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -154,6 +162,7 @@ android_app_import {
 	name: "HotwordEnrollmentOKGoogleFUSIONPro",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleFUSIONPro/HotwordEnrollmentOKGoogleFUSIONPro.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -166,6 +175,7 @@ android_app_import {
 	name: "HotwordEnrollmentXGoogleFUSIONPro",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIONPro.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -190,6 +200,7 @@ android_app_import {
 	name: "PixelCameraServicesC10",
 	owner: "google",
 	apk: "proprietary/product/priv-app/PixelCameraServicesC10/PixelCameraServicesC10.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -214,6 +225,7 @@ android_app_import {
 	name: "WfcActivation",
 	owner: "google",
 	apk: "proprietary/product/priv-app/WfcActivation/WfcActivation.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -237,6 +249,7 @@ android_app_import {
 	name: "CarrierSetup",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/CarrierSetup/CarrierSetup.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -273,6 +286,7 @@ android_app_import {
 	name: "EuiccSupportPixel",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -285,6 +299,7 @@ android_app_import {
 	name: "EuiccSupportPixelPermissions",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -321,6 +336,7 @@ android_app_import {
 	name: "MyVerizonServices",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -333,6 +349,7 @@ android_app_import {
 	name: "OemRilService",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/OemRilService/OemRilService.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -369,6 +386,7 @@ android_app_import {
 	name: "ShannonIms",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/ShannonIms/ShannonIms.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -381,6 +399,7 @@ android_app_import {
 	name: "ShannonRcs",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -393,6 +412,7 @@ android_app_import {
 	name: "UwbVendorService",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/UwbVendorService/UwbVendorService.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -405,6 +425,7 @@ android_app_import {
 	name: "grilservice",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/grilservice/grilservice.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -499,10 +520,18 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_apex {
-	name: "com.google.android.widevine",
+	name: "com.google.android.hardware.biometrics.face.pixel22",
 	owner: "google",
-	src: "proprietary/vendor/apex/com.google.android.widevine.apex",
-	filename: "com.google.android.widevine.apex",
+	src: "proprietary/vendor/apex/com.google.android.hardware.biometrics.face.pixel22.apex",
+	filename: "com.google.android.hardware.biometrics.face.pixel22.apex",
+	soc_specific: true,
+}
+
+prebuilt_apex {
+	name: "com.google.android.widevine-wv_341113000",
+	owner: "google",
+	src: "proprietary/vendor/apex/com.google.android.widevine-wv_341113000.apex",
+	filename: "com.google.android.widevine-wv_341113000.apex",
 	soc_specific: true,
 }
 
@@ -541,15 +570,6 @@ prebuilt_etc_xml {
 	name: "android.hardware.authsecret-service.citadel",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.authsecret-service.citadel.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.biometrics.face-service.22.pixel",
-	owner: "google",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.face-service.22.pixel.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -631,6 +651,15 @@ prebuilt_etc_xml {
 	name: "com.google.edgetpu.dba-service",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/com.google.edgetpu.dba-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "com.google.edgetpu.tachyon-service",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/com.google.edgetpu.tachyon-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
