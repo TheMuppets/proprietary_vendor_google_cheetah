@@ -56,7 +56,7 @@ service modem_logging_enabled_change /vendor/bin/modem_logging_control ENABLED_C
     disabled
     oneshot
 
-on property:persist.vendor.verbose_logging_enabled=* && property:ro.debuggable=0
+on property:persist.vendor.verbose_logging_enabled=*
     setprop persist.vendor.sys.modem.logging.enable ${persist.vendor.verbose_logging_enabled}
 
 on property:persist.vendor.sys.modem.logging.enable=*
