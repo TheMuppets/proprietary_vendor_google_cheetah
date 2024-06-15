@@ -24,3 +24,11 @@ on property:init.svc.dumpstatez=running
 
 on property:init.svc.bugreportd=running
     start vendor.modem_svc_sit_dumpstate
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=1
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_threshold 500
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_hysteresis 200
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 1
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=0
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 0

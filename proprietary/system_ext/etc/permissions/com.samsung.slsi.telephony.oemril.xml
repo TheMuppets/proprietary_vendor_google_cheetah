@@ -5,5 +5,7 @@
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.REBOOT"/>
+        <!--For SubscriptionManager to see all SIMs regardless SIM association-->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 </permissions>

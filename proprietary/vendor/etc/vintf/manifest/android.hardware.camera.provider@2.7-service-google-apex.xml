@@ -2,10 +2,10 @@
     Input:
         vendor/google_devices/gs-common/proprietary/camera/lyric/android.hardware.camera.provider@2.7-service-google-apex.xml
 -->
-<manifest version="7.0" type="device">
+<manifest version="8.0" type="device">
     <hal format="aidl">
         <name>android.hardware.camera.provider</name>
-        <version>2</version>
+        <version>3</version>
         <fqname>ICameraProvider/internal/0</fqname>
     </hal>
 </manifest>

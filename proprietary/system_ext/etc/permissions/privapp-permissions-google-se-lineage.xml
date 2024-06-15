@@ -33,6 +33,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.REQUEST_NETWORK_SCORES"/>
         <permission name="android.permission.ACCESS_AMBIENT_CONTEXT_EVENT"/>
+        <permission name="android.permission.CONTROL_UI_TRACING" />
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
@@ -72,6 +74,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.SET_UNRESTRICTED_KEEP_CLEAR_AREAS"/>
+        <permission name="android.permission.ACCESS_HIDDEN_PROFILES_FULL"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.gsf">
@@ -115,6 +118,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
         <permission name="android.permission.CUSTOMIZE_SYSTEM_UI"/>
+        <permission name="android.permission.SET_WALLPAPER_DIM_AMOUNT"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.feedback">
@@ -141,12 +145,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
 
-    <privapp-permissions package="com.google.android.lily.setupwizard">
-        <permission name="android.permission.CHANGE_CONFIGURATION"/>
-        <permission name="android.permission.MANAGE_USERS"/>
-        <permission name="android.permission.STATUS_BAR"/>
-    </privapp-permissions>
-
     <privapp-permissions package="com.google.android.grilservice">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
@@ -167,6 +165,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+	<permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.gnsspixelmonitor">
@@ -253,4 +252,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <!-- Used to detect preferred user profile for Face Unlock (may be different from the current user). -->
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.avatarpicker">
+        <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+    </privapp-permissions>
+
 </permissions>

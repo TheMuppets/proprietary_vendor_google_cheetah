@@ -59,6 +59,14 @@ service modem_logging_enabled_change /vendor/bin/modem_logging_control ENABLED_C
 on property:persist.vendor.verbose_logging_enabled=*
     setprop persist.vendor.sys.modem.logging.enable ${persist.vendor.verbose_logging_enabled}
 
+# Extensive logging enablement logic:
+#   modem_logging enabled + extensive enabled -> use extensive logging
+#   modem_logging enabled + extensive disabled -> use default logging
+#   modem_logging disabled + extensive enabled -> logging disabled
+#   modem_logging disabled + extensive disabled -> logging disabled
+on property:persist.vendor.modem.extensive_logging_enabled=* && property:vendor.sys.modem.logging.enable=true
+    start modem_logging_start
+
 on property:persist.vendor.sys.modem.logging.enable=*
     setprop vendor.sys.modem.logging.enable ${persist.vendor.sys.modem.logging.enable}
 

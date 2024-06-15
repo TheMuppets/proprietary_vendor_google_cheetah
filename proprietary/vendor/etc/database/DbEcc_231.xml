@@ -11,18 +11,11 @@
  */
  -->
 <EccTable>
-    <EccEntry mnc="01" number="112" category="0" condition="00000001" />
-
-    <EccEntry mnc="02" number="112" category="0" condition="00000001" />
-    <EccEntry mnc="02" number="911" category="0" condition="00000001" />
-    <EccEntry mnc="02" number="000" category="0" condition="00000010" />
-    <EccEntry mnc="02" number="08" category="0" condition="00000010" />
-    <EccEntry mnc="02" number="110" category="0" condition="00000010" />
-    <EccEntry mnc="02" number="999" category="0" condition="00000010" />
-    <EccEntry mnc="02" number="118" category="0" condition="00000010" />
-    <EccEntry mnc="02" number="119" category="0" condition="00000010" />
-
     <!-- #R stands for retail -->
     <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
     <EccEntry mnc="#R" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="#R" number="150" category="4" condition="00000001" />
+    <EccEntry mnc="#R" number="155" category="2" condition="00000001" />
+    <EccEntry mnc="#R" number="158" category="1" condition="00000001" />
+    <EccEntry mnc="#R" number="159" category="0" condition="10010000" />
 </EccTable>

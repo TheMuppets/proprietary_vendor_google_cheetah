@@ -2,7 +2,7 @@
     Input:
         vendor/google_nos/host/android/hals/identity/citadel/android.hardware.identity.strongbox.xml
 -->
-<manifest version="7.0" type="device">
+<manifest version="8.0" type="device">
     <hal format="aidl">
         <name>android.hardware.identity</name>
         <version>5</version>

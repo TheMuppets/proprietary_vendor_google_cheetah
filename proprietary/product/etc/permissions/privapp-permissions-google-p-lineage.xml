@@ -40,6 +40,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.camera.services">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
     </privapp-permissions>
@@ -136,6 +137,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.SATELLITE_COMMUNICATION"/>
         <permission name="com.google.android.apps.stargate.permission.SEND_EMERGENCY_INTENTS"/>
+        <permission name="com.google.android.apps.stargate.permission.SEND_NON_EMERGENCY_INTENTS"/>
+        <permission name="com.google.android.apps.stargate.endpointservice.ACCESS_ENDPOINT_SERVICE"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.wearables.maestro.companion">
@@ -271,6 +274,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+        <permission name="android.permission.SATELLITE_COMMUNICATION"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.tetheringentitlement">
@@ -369,6 +373,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.POWER_SAVER"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.wellbeing">
@@ -427,6 +432,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
         <permission name="android.permission.CHECK_REMOTE_LOCKSCREEN"/>
         <permission name="android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS"/>
+        <permission name="android.permission.CONFIGURE_FACTORY_RESET_PROTECTION"/>
         <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.CONTROL_DISPLAY_SATURATION"/>
@@ -434,6 +440,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.DISPATCH_PROVISIONING_MESSAGE"/>
         <permission name="android.permission.DOMAIN_VERIFICATION_AGENT"/>
         <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.EMERGENCY_INSTALL_PACKAGES"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="android.permission.GET_APP_OPS_STATS"/>
         <permission name="android.permission.INSTALL_LOCATION_TIME_ZONE_PROVIDER_SERVICE" />
@@ -473,6 +480,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE" />
         <permission name="android.permission.PROVIDE_TRUST_AGENT"/>
         <permission name="android.permission.READ_DREAM_STATE"/>
+        <permission name="android.permission.READ_DROPBOX_DATA"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.READ_NEARBY_STREAMING_POLICY"/>
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
@@ -503,6 +511,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON"/>
         <permission name="android.permission.TETHER_PRIVILEGED"/>
+        <permission name="android.permission.THREAD_NETWORK_PRIVILEGED"/>
         <permission name="android.permission.TURN_SCREEN_ON"/>
         <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
         <permission name="android.permission.UPDATE_DEVICE_STATS"/>
@@ -776,6 +785,9 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.tips">
+        <permission name="android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION"/>
+        <permission name="android.permission.READ_SEARCH_INDEXABLES"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 </permissions>

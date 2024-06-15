@@ -33,9 +33,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "CarrierSettings",
+	name: "CarrierSettings_signed_45.0.591154042",
 	owner: "google",
-	apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
+	apk: "proprietary/product/priv-app/CarrierSettings_signed_45.0.591154042/CarrierSettings_signed_45.0.591154042.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -95,9 +95,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DeviceIntelligenceNetworkPrebuilt",
+	name: "DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore",
 	owner: "google",
-	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk",
+	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -108,9 +108,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DevicePersonalizationPrebuiltPixel2022",
+	name: "DevicePersonalizationPrebuiltPixel2022-v.U.14.playstore",
 	owner: "google",
-	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel2022/DevicePersonalizationPrebuiltPixel2022.apk",
+	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel2022-v.U.14.playstore/DevicePersonalizationPrebuiltPixel2022-v.U.14.playstore.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -197,9 +197,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "PixelCameraServicesC10",
+	name: "PixelCameraServices",
 	owner: "google",
-	apk: "proprietary/product/priv-app/PixelCameraServicesC10/PixelCameraServicesC10.apk",
+	apk: "proprietary/product/priv-app/PixelCameraServices/PixelCameraServices.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -594,6 +594,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "android.hardware.contexthub-service.generic",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.contexthub-service.generic.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "android.hardware.gnss@2.1-service-brcm",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-brcm.xml",
@@ -723,6 +732,15 @@ prebuilt_etc_xml {
 	name: "vendor.dolby.media.c2@1.0-service",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.google.battery_mitigation-default",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.google.battery_mitigation-default.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,

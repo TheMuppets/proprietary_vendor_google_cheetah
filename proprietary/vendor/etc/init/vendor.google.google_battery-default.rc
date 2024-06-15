@@ -56,3 +56,6 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/devices/platform/google,charger/dd_charge_stop_level
     chown system system /sys/devices/platform/google,charger/dd_settings
     chown system system /sys/devices/platform/google,charger/dd_state
+
+    chown system system /sys/devices/platform/maxim,max77779fwu/enable_update
+    chown system system /sys/devices/platform/maxim,max77779fwu/update_firmware

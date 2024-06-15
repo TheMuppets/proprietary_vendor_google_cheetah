@@ -11,6 +11,40 @@
  */
  -->
 <EccTable>
+    <!-- Plus 26001 -->
+    <EccEntry mnc="01" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="01" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="01" number="984" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="985" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="997" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="998" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="999" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="986" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="987" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="989" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="991" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="992" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="993" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="994" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="995" category="0" condition="10010000" />
+    <EccEntry mnc="01" number="996" category="0" condition="10010000" />
+    <!-- PLAY 26006 -->
+    <EccEntry mnc="06" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="06" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="06" number="984" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="985" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="997" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="998" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="999" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="986" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="987" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="989" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="991" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="992" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="993" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="994" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="995" category="0" condition="10010000" />
+    <EccEntry mnc="06" number="996" category="0" condition="10010000" />
     <!-- #R stands for retail -->
     <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
     <EccEntry mnc="#R" number="911" category="0" condition="00000001" />

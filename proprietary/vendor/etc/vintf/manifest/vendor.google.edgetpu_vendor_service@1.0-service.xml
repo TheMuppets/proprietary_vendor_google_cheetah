@@ -2,7 +2,7 @@
     Input:
         vendor/google_devices/gs201/proprietary/gchips/tpu/aidl/vendor.google.edgetpu_vendor_service@1.0-service.xml
 -->
-<manifest version="7.0" type="device">
+<manifest version="8.0" type="device">
     <hal format="aidl">
         <name>com.google.edgetpu</name>
         <version>2</version>

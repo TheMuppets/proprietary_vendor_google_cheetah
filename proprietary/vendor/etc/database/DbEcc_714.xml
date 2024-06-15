@@ -11,12 +11,6 @@
  */
  -->
 <EccTable>
-    <EccEntry mnc="020" number="112" category="0" condition="00000001" />
-    <EccEntry mnc="020" number="911" category="0" condition="00000001" />
-    <EccEntry mnc="020" number="115" category="0" condition="00000001" />
-    <EccEntry mnc="020" number="118" category="0" condition="00000001" />
-    <EccEntry mnc="020" number="122" category="0" condition="00000001" />
-
     <!-- #R stands for retail -->
     <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
     <EccEntry mnc="#R" number="911" category="0" condition="00000001" />

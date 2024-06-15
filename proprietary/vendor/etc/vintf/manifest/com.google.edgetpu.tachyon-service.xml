@@ -2,4 +2,4 @@
     Input:
         vendor/google/darwinn2/tachyon/service/com.google.edgetpu.tachyon-service.xml
 -->
-<manifest version="7.0" type="device"/>
+<manifest version="8.0" type="device"/>

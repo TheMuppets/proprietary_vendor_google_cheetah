@@ -2,7 +2,7 @@
     Input:
         vendor/google/whitechapel/services/GoogleRil/native/diablo/1.5/manifest_radioext.xml
 -->
-<manifest version="7.0" type="device">
+<manifest version="8.0" type="device">
     <hal format="hidl">
         <name>vendor.google.radioext</name>
         <transport>hwbinder</transport>
