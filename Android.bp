@@ -499,6 +499,41 @@ prebuilt_etc_xml {
 	system_ext_specific: true,
 }
 
+install_symlink {
+	name: "libdmengine_libdmengine_symlink32",
+	product_specific: true,
+	installed_location: "priv-app/DMService/lib/arm/libdmengine.so",
+	symlink_target: "/product/lib/libdmengine.so",
+}
+
+install_symlink {
+	name: "libdmjavaplugin_libdmjavaplugin_symlink32",
+	product_specific: true,
+	installed_location: "priv-app/DMService/lib/arm/libdmjavaplugin.so",
+	symlink_target: "/product/lib/libdmjavaplugin.so",
+}
+
+install_symlink {
+	name: "libdmengine_libdmengine_symlink64",
+	product_specific: true,
+	installed_location: "priv-app/DMService/lib/arm64/libdmengine.so",
+	symlink_target: "/product/lib64/libdmengine.so",
+}
+
+install_symlink {
+	name: "libdmjavaplugin_libdmjavaplugin_symlink64",
+	product_specific: true,
+	installed_location: "priv-app/DMService/lib/arm64/libdmjavaplugin.so",
+	symlink_target: "/product/lib64/libdmjavaplugin.so",
+}
+
+install_symlink {
+	name: "libhbmsvmanager_jni_libhbmsvmanager_jni_symlink64",
+	system_ext_specific: true,
+	installed_location: "priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so",
+	symlink_target: "/system_ext/lib64/libhbmsvmanager_jni.so",
+}
+
 cc_prebuilt_library_shared {
 	name: "libOpenCL",
 	owner: "google",
