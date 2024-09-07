@@ -66,15 +66,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google/cheetah/proprietary/system_ext/lib/libedgetpu_dba.google.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libedgetpu_dba.google.so \
     vendor/google/cheetah/proprietary/system_ext/lib/libmediaadaptor.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmediaadaptor.so \
-    vendor/google/cheetah/proprietary/system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so \
-    vendor/google/cheetah/proprietary/system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so \
     vendor/google/cheetah/proprietary/system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.google.edgetpu_app_service-V3-ndk.so \
     vendor/google/cheetah/proprietary/system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.google.edgetpu_vendor_service-V2-ndk.so \
     vendor/google/cheetah/proprietary/system_ext/lib64/libedgetpu_dba.google.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libedgetpu_dba.google.so \
     vendor/google/cheetah/proprietary/system_ext/lib64/libhbmsvmanager_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libhbmsvmanager_jni.so \
     vendor/google/cheetah/proprietary/system_ext/lib64/libmediaadaptor.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmediaadaptor.so \
-    vendor/google/cheetah/proprietary/system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so \
-    vendor/google/cheetah/proprietary/system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so \
     vendor/google/cheetah/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \
     vendor/google/cheetah/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up \
     vendor/google/cheetah/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up \
