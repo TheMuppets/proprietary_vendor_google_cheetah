@@ -1,0 +1,6 @@
+service edgetpu_vendor_service /vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
+    interface aidl com.google.edgetpu.IEdgeTpuVendorService/default
+    disabled
+    oneshot
+    user system
+    group system

@@ -1,0 +1,14 @@
+on post-fs-data
+    mkdir /data/vendor/chre 0770 context_hub context_hub
+on boot
+    setprop vendor.chre.multiclient_hal.enabled true
+
+service vendor.contexthub-default /vendor/bin/hw/android.hardware.contexthub-service.generic
+    class hal late_start
+    user context_hub
+    group wakelock context_hub system readproc
+    capabilities BLOCK_SUSPEND
+    # socket <name> <type> <perm> [ <user> [ <group> [ <seclabel> ] ] ]
+    # Still using the name "chre" to make the change transparent to existing users
+    socket chre seqpacket 0660 root context_hub
+    shutdown critical

@@ -1,0 +1,12 @@
+# IMS packet router daemon
+service pktrouter /system/vendor/bin/wfc-pkt-router
+    class main
+    user root
+    group system radio
+    disabled
+
+on property:vendor.pktrouter=1
+    start pktrouter
+
+on property:vendor.pktrouter=0
+    stop pktrouter

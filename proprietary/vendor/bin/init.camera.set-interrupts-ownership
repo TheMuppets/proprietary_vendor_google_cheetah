@@ -1,0 +1,10 @@
+#!/vendor/bin/sh
+
+camera_irq_nums=$(grep "lwis" /proc/interrupts | awk '{ print(substr($1, 0, length($1) - 1)) }')
+
+for irq_num in ${camera_irq_nums[@]};
+do
+	chown system:system /proc/irq/${irq_num}/smp_affinity
+	chown system:system /proc/irq/${irq_num}/smp_affinity_list
+done
+

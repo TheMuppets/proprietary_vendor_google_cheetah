@@ -1,0 +1,9 @@
+service ril-daemon /vendor/bin/hw/rild_exynos
+    class main
+    user radio
+    group radio cache inet misc audio log readproc wakelock
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    seclabel u:r:rild:s0
+
+on property:vendor.sys.rild_reset=1
+    setprop vendor.sys.rild_reset 0

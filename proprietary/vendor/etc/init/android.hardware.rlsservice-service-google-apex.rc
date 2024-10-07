@@ -1,0 +1,6 @@
+service rlsservice /apex/com.google.pixel.camera.hal/bin/rlsservice
+    class hal
+    user system
+    group system
+    namespace mnt
+    task_profiles ServiceCapacityLow

@@ -1,0 +1,9 @@
+#
+# Common configuration registry script.
+#
++/power
+  mips_vote_per_sampling_rate=0.4
+  mips_max_vote=350
+
++/power/mips_voter
+  enable=1

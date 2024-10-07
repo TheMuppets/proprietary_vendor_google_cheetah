@@ -1,0 +1,13 @@
+# RFS daemon
+    service RFS-daemon /vendor/bin/rfsd -d
+    class main
+    # FEATURE_RFSD_GOOGLE
+    # Change to radio user
+    user radio
+    group radio cache inet misc audio sdcard_rw log
+    seclabel u:r:rfsd:s0
+    # FEATURE_RFSD_GOOGLE
+    # Add capabilities
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    shutdown critical
+    ioprio rt 0

@@ -1,0 +1,11 @@
+service aocd /vendor/bin/aocd
+  class late_start
+  user root
+  group root system audio
+
+# Define vendor props so that we can start and stop aocd on demand.
+on property:vendor.aocd=1
+    start aocd
+
+on property:vendor.aocd=0
+    stop aocd

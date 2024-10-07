@@ -1,0 +1,9 @@
+service edgetpu_tachyon_service /vendor/bin/hw/com.google.edgetpu.tachyon-service
+    interface aidl com.google.edgetpu.tachyon.IComputeService/default
+    oneshot
+    disabled
+    class hal
+    user system
+    group system
+    rlimit rtprio 99 99
+    capabilities SYS_NICE

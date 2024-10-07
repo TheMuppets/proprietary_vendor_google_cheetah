@@ -1,0 +1,8 @@
+# When enabling on a device, SELinux policies need to be added for the driver
+# binary. Android startup services should run in their own SELinux domain.
+# https://source.android.com/security/selinux/device-policy#label_new_services_and_address_denials
+service hal_neuralnetworks_darwinn /vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
+    class hal
+    user system
+    group system
+    task_profiles NNApiHALPerformance

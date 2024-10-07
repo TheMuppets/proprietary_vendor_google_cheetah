@@ -1,0 +1,9 @@
+on post-fs-data
+    mkdir /data/vendor/wireless_charger 0744 system system
+    chown system system /data/vendor/wireless_charger
+
+service hal_wlcservice /vendor/bin/hw/vendor.google.wireless_charger.service-default
+    class charger hal
+    user system
+    group system
+    file /dev/kmsg w

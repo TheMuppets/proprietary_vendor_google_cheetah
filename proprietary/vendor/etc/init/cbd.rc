@@ -1,0 +1,51 @@
+on fs
+# modem partition for cbd
+    setprop vendor.cbd.partition modem
+
+# Modem boot daemon
+    service cpboot-daemon /vendor/bin/cbd -d -t ${ro.vendor.cbd.modem_type} -P by-name/${vendor.cbd.partition} -s 2
+    class main
+    # FEATURE_CBD_GOOGLE
+    # Change to radio user
+    user radio
+    group radio system cache inet misc audio sdcard_rw log
+    # FEATURE_CBD_GOOGLE
+    # Add capabilities
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYSLOG
+    seclabel u:r:cbd:s0
+
+on property:telephony.TnNtn.image_switch=ntn
+    setprop vendor.cbd.modem_reselect 1
+
+on property:telephony.TnNtn.image_switch=tn
+    setprop vendor.cbd.modem_reselect 2
+
+
+on property:vendor.cbd.modem_bin_status=*
+    setprop telephony.ril.modem_bin_status ${vendor.cbd.modem_bin_status}
+
+# Binary selection using binary type
+on property:vendor.cbd.modem_reselect=*
+    stop cpboot-daemon
+    setprop vendor.cbd.modem_bin_type ${vendor.cbd.modem_reselect}
+    start cpboot-daemon
+
+on property:vendor.sys.modem_reset=1
+    stop cpboot-daemon
+    setprop vendor.cbd.modem_bin_type 0
+    setprop vendor.sys.modem_reset 0
+    start cpboot-daemon
+
+on property:ro.boot.slot_suffix=*
+    setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
+
+on property:vendor.ril.cbd.svc=1
+    start cpboot-daemon
+
+on property:vendor.ril.cbd.svc=0
+    stop cpboot-daemon
+
+on post-fs-data
+    mkdir /data/vendor/ssrdump 0771 root system
+    mkdir /data/vendor/ssrdump/coredump 0771 root system
+    restorecon /data/vendor/ssrdump

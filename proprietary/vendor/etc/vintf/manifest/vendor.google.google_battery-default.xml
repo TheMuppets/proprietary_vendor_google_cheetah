@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/google/interfaces/google_battery/aidl/default/vendor.google.google_battery-default.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.google.google_battery</name>
+        <version>2</version>
+        <fqname>IGoogleBattery/default</fqname>
+    </hal>
+</manifest>

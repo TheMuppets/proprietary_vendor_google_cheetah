@@ -1,0 +1,5 @@
+service vendor.uwb_hal /vendor/bin/hw/android.hardware.qorvo.uwb.service
+    class hal
+    user uwb
+    group uwb
+    capabilities NET_ADMIN NET_RAW

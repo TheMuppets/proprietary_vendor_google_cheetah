@@ -1,0 +1,5 @@
+service bcmbtlinux /vendor/bin/hw/android.hardware.bluetooth-service.bcmbtlinux
+    class hal
+    user bluetooth
+    group bluetooth net_admin net_bt_admin system
+    capabilities NET_ADMIN

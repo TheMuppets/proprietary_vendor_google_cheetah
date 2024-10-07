@@ -1,0 +1,7 @@
+service vendor.google.radioext@1.0 /vendor/bin/hw/vendor.google.radioext@1.0-service
+    class hal
+    user radio
+    group radio system
+
+on post-fs-data
+    mkdir /data/vendor/radio/freq 0775 radio system

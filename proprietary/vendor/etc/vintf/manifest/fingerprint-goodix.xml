@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/goodix/udfps/g7_aidl_trusty/fingerprint-goodix.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>3</version>
+        <fqname>IFingerprint/default</fqname>
+    </hal>
+</manifest>

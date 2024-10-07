@@ -1,0 +1,7 @@
+# DM daemon
+service DM-daemon /vendor/bin/dmd
+    class main
+    user system
+    group system media_rw sdcard_rw
+    task_profiles ServiceCapacityLow
+    priority 10

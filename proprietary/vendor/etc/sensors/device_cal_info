@@ -1,0 +1,87 @@
+#!/system/bin/sh
+#
+# Copyright 2021 Google LLC. All Rights Reserved.
+#
+# Cheetah/Panther Calibration Sub-Script.
+#
+# Contains C10/P10-specific sensor information for sensor_cal.
+
+# Sensors supported for calibration.
+SUPPORTED_SENSORS="accel als baro fusion_mag gyro imu_temp prox rls spectral"
+
+#######################################
+# Converts a sensor name to its path.
+# Globals:
+#   CAL_PARAMS
+#   SENSOR
+#   SENSOR_NAME
+#   SENSOR_PATH
+# Arguments:
+#   None
+# Outputs:
+#   Saves the sensor path in SENSOR_PATH.
+#   Logging based on set VERBOSITY level.
+#######################################
+sensor_cal::sensor_to_path() {
+  if [[ "${SENSOR}" == "accel" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsv/0/accel"
+    SENSOR_NAME="lsm6dsv"
+    # Add "avg_odr_30" in addition to the original parameters.
+    CAL_PARAMS+=" avg_odr_30"
+  elif [[ "${SENSOR}" == "als" ]]; then
+    SENSOR_PATH="/fac_cal/dev/tmd3719/0/als"
+    SENSOR_NAME="tmd3719"
+    CAL_PARAMS=" \
+      clear_gain6_ratio clear_gain7_ratio clear_gain8_ratio clear_gain9_ratio \
+      clear_gain10_ratio clear_gain11_ratio \
+      red_gain6_ratio red_gain7_ratio red_gain8_ratio red_gain9_ratio \
+      red_gain10_ratio red_gain11_ratio red_clear_ratio \
+      green_gain6_ratio green_gain7_ratio green_gain8_ratio green_gain9_ratio \
+      green_gain10_ratio green_gain11_ratio green_clear_ratio \
+      blue_gain6_ratio blue_gain7_ratio blue_gain8_ratio blue_gain9_ratio \
+      blue_gain10_ratio blue_gain11_ratio blue_clear_ratio \
+      disp_leak lux_scale panel_serial panel_type \
+      sync_delay_ns sync_delay_2_ns"
+  elif [[ "${SENSOR}" == "baro" ]]; then
+    SENSOR_PATH="/fac_cal/dev/icp20100/0/baro"
+    SENSOR_NAME="icp20100"
+    # Add "temp_intercept" in addition to the original parameters.
+    CAL_PARAMS+=" temp_intercept"
+  elif [[ "${SENSOR}" == "fusion_mag" ]]; then
+    SENSOR_PATH="/fac_cal/dev/fusion_mag/0/mag"
+    SENSOR_NAME="fusion_mag"
+    SENSOR_TYPE="mag"
+    CAL_PARAMS="p1 p2 p3 mix"
+  elif [[ "${SENSOR}" == "gyro" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsv/0/gyro"
+    SENSOR_NAME="lsm6dsv"
+    # Add "avg_odr_30" in addition to the original parameters.
+    CAL_PARAMS+=" avg_odr_30"
+  elif [[ "${SENSOR}" == "imu_temp" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsv/0/temp"
+    SENSOR_NAME="lsm6dsv"
+  elif [[ "${SENSOR}" == "prox" ]]; then
+    SENSOR_PATH="/fac_cal/dev/tmd3719/0/prox"
+    SENSOR_NAME="tmd3719"
+    CAL_PARAMS=" \
+      hp_pdata0_baseline hp_pdata1_baseline hp_pdata0_offset hp_pdata1_offset \
+      hp_pdata0_scale hp_pdata1_scale \
+      pdata0_baseline pdata1_baseline pdata0_scale pdata1_scale vcsel_ma"
+  elif [[ "${SENSOR}" == "rls" ]]; then
+    SENSOR_PATH="/fac_cal/dev/vd6282/0/rls"
+    SENSOR_NAME="vd6282"
+    CAL_PARAMS="fac_cal_transform g_to_lux"
+  elif [[ "${SENSOR}" == "spectral" ]]; then
+    SENSOR_PATH="/fac_cal/dev/vd6282/0/spectral"
+    SENSOR_NAME="vd6282"
+    CAL_PARAMS=" \
+      dark_r dark_g dark_b dark_ir dark_clr1 dark_clr2 \
+      rals_r rals_g rals_b rals_ir rals_clr1 rals_clr2 rals_flk \
+      ll_r ll_g ll_b ll_clr1 ll_clr2"
+  else
+    sensor_cal::ERROR "Unknown or unimplemented sensor: ${SENSOR}"
+    sensor_cal::exit_badparam
+  fi
+
+  sensor_cal::DEBUG "Registry path: ${SENSOR_PATH}"
+}

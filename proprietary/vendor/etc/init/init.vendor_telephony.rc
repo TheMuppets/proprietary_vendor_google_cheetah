@@ -1,0 +1,7 @@
+on post-fs-data
+
+service init-radio-sh /vendor/bin/init.radio.sh
+    class late_start
+    user radio
+    group root radio
+    oneshot

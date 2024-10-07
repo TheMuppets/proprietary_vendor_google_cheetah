@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright Samsung Electronics Co., LTD.
+ *
+ * This software is proprietary of Samsung Electronics.
+ * No part of this software, either material or conceptual may be copied or distributed, transmitted,
+ * transcribed, stored in a retrieval system or translated into any human or computer language in any form by any means,
+ * electronic, mechanical, manual or otherwise, or disclosed
+ * to third parties without the express written permission of Samsung Electronics.
+ */
+ -->
+<EccTable>
+    <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
+    <EccEntry mnc="#R" number="911" category="0" condition="00000001" />
+    <EccEntry mnc="#R" number="15" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="17" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="18" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="115" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="119" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="191" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="196" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="197" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="116000" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="116111" category="0" condition="00010000" />
+    <EccEntry mnc="#R" number="116117" category="0" condition="00010000" />
+</EccTable>

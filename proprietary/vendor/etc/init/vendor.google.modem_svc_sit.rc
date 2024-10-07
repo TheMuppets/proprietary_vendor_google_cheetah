@@ -1,0 +1,34 @@
+service vendor.modem_svc_sit /vendor/bin/modem_svc_sit -s
+    class core
+    user radio
+    group system
+
+service vendor.modem_svc_sit_dumpstate /vendor/bin/modem_svc_sit -e -m
+    user radio
+    group system
+    disabled
+    oneshot
+
+# Create file directories for modem svc messages, sorted alphabetically
+on post-fs-data
+    mkdir /data/vendor/radio/modem_temp_file 0775 radio system
+    mkdir /mnt/vendor/modem_userdata/replay 0775 radio system
+
+on property:vendor.modem.crash_detected=1
+    stop vendor.modem_svc_sit
+    setprop vendor.modem.crash_detected 0
+    start vendor.modem_svc_sit
+
+on property:init.svc.dumpstatez=running
+    start vendor.modem_svc_sit_dumpstate
+
+on property:init.svc.bugreportd=running
+    start vendor.modem_svc_sit_dumpstate
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=1
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_threshold 500
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_hysteresis 200
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 1
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=0
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 0
