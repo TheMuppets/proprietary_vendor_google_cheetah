@@ -1,11 +1,11 @@
 
-	airbus_deØóûæ
+	airbus_de‚€Êµî
 aircraftaircraftpx
 
 industrialninPpx
 internetinternetpx
 iotiotpx
 manufmanufpx
-mcsmcspx"D
-cellular_usage_setting_int"
-show_4g_for_lte_data_icon_bool(Bœ´’²
+mcsmcspx"K)
+#carrier_nr_availabilities_int_array:
+cellular_usage_setting_intBØ–Ò¹

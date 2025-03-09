@@ -13,12 +13,14 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/battery/aacr_cycle_grace
     chown system system /sys/class/power_supply/battery/aacr_min_capacity_rate
     chown system system /sys/class/power_supply/battery/aacr_cliff_capacity_rate
+    chown system system /sys/class/power_supply/battery/aacr_profile
     chown system system /sys/class/power_supply/battery/aafv_state
     chown system system /sys/class/power_supply/battery/aafv_apply_max
     chown system system /sys/class/power_supply/battery/aafv_max_offset
     chown system system /sys/class/power_supply/battery/aafv_cliff_cycle
     chown system system /sys/class/power_supply/battery/aafv_cliff_offset
     chown system system /sys/class/power_supply/battery/aafv_profile
+    chown system system /sys/class/power_supply/battery/aact_state
     chown system system /sys/class/power_supply/battery/bd_trickle_enable
     chown system system /sys/class/power_supply/battery/bd_trickle_recharge_soc
     chown system system /sys/class/power_supply/battery/bd_trickle_cnt

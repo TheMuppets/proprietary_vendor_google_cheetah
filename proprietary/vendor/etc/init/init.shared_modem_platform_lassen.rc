@@ -1,0 +1,40 @@
+# init rc file for lassen implementation of shared_modem_platform.
+
+service init.shared_modem_platform /vendor/bin/shared_modem_platform -s
+    class core
+    user radio
+    group system
+
+service init.shared_modem_platform_dumpstate /vendor/bin/shared_modem_platform -e -m umi -c tea -a flush
+    user radio
+    group system
+    disabled
+    oneshot
+
+# Create file directories for modem svc messages, sorted alphabetically
+on post-fs-data
+    mkdir /data/vendor/radio/modem_temp_file 0775 radio system
+    mkdir /mnt/vendor/modem_userdata/replay 0775 radio system
+
+on boot
+    rm /data/vendor/radio/shared_modem_platform_pid
+
+on property:vendor.modem.crash_detected=1
+    stop init.shared_modem_platform
+    rm /data/vendor/radio/shared_modem_platform_pid
+    setprop vendor.modem.crash_detected 0
+    start init.shared_modem_platform
+
+on property:init.svc.dumpstatez=running
+    start init.shared_modem_platform_dumpstate
+
+on property:init.svc.bugreportd=running
+    start init.shared_modem_platform_dumpstate
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=1
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_threshold 500
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/tp_hysteresis 200
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 1
+
+on property:persist.vendor.modem.qms.pcie_dyn_switch=0
+    write /sys/devices/platform/cpif/dynamic_pcie_spd/dynamic_spd_enable 0

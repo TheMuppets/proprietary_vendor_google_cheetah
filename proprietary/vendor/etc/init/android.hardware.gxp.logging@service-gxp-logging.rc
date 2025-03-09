@@ -5,6 +5,7 @@ service gxp_logging /vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logg
     class late_start
     user system
     group system
+    task_profiles ServiceCapacityLow
 on boot
     chown system system /sys/class/gxp/gxp/device/dsp_usage_0
     chown system system /sys/class/gxp/gxp/device/dsp_usage_1

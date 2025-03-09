@@ -5,6 +5,7 @@ service edgetpu_logging /vendor/bin/hw/android.hardware.edgetpu.logging@service-
     class late_start
     user system
     group system
+    task_profiles ServiceCapacityLow
 on boot
     chown system system /sys/class/edgetpu/edgetpu-soc/device/inference_count
     chown system system /sys/class/edgetpu/edgetpu-soc/device/param_cache_hit_count

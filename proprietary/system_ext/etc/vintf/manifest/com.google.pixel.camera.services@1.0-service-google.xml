@@ -2,7 +2,7 @@
     Input:
         vendor/google/apps/PersistentBackgroundCameraServices/com.google.pixel.camera.services@1.0-service-google.xml
 -->
-<manifest version="8.0" type="framework">
+<manifest version="9.0" type="framework">
     <hal format="aidl">
         <name>com.google.pixel.camera.services.binder</name>
         <fqname>IServiceBinder/default</fqname>

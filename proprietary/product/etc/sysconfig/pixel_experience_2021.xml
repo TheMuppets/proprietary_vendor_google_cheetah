@@ -8,4 +8,6 @@
     <!-- Allow Pixel Support app to take bug report. -->
     <bugreport-whitelisted package="com.google.android.apps.pixel.support" />
 
+    <!-- Allow Pixel Factory OTA app to take bug report. -->
+    <bugreport-whitelisted package="com.google.android.factoryota" />
 </config>

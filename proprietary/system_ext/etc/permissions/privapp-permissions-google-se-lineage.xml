@@ -266,4 +266,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION" />
         <permission name="android.permission.ACCESS_SMARTSPACE" />
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.multiuser">
+        <permission name="android.permission.MANAGE_USERS"/>
+    </privapp-permissions>
 </permissions>
