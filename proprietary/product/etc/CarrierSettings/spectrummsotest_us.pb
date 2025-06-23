@@ -1,5 +1,5 @@
 
-spectrummsotest_us€Êµî7
+spectrummsotest_usøÌâ„7
 XM LAB1internetp
 XM LAB1admin.comcastp"ûC
 ?always_show_primary_signal_bar_in_opportunistic_network_boolean(9

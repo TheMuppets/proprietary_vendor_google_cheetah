@@ -21,6 +21,12 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/battery/aafv_cliff_offset
     chown system system /sys/class/power_supply/battery/aafv_profile
     chown system system /sys/class/power_supply/battery/aact_state
+    chown system system /sys/class/power_supply/battery/aact_cv_limits
+    chown system system /sys/class/power_supply/battery/aact_temp_limits
+    chown system system /sys/class/power_supply/battery/aact_chg_ecc
+    chown system system /sys/class/power_supply/battery/aact_profile
+    chown system system /sys/class/power_supply/battery/aacp_version
+    chown system system /sys/class/power_supply/battery/aacp_opt_out
     chown system system /sys/class/power_supply/battery/bd_trickle_enable
     chown system system /sys/class/power_supply/battery/bd_trickle_recharge_soc
     chown system system /sys/class/power_supply/battery/bd_trickle_cnt
@@ -35,6 +41,9 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/battery/csi_stats
 
     chown system system /sys/class/power_supply/wireless/device/mitigate_threshold
+    chown system system /sys/class/power_supply/wireless/device/rx_fwupdate
+    chown system system /sys/class/power_supply/wireless/device/rx_vertag
+    chown system system /sys/class/power_supply/wireless/device/qi22_en_gpio
 
     chown system system /sys/devices/platform/soc/soc:google,charger/bd_drainto_soc
     chown system system /sys/devices/platform/soc/soc:google,charger/bd_recharge_soc
@@ -71,7 +80,12 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/devices/platform/maxim,max77779fwu/update_firmware
 
     chown system system /sys/class/power_supply/battery/charge_to_limit
+    chown system system /sys/class/power_supply/battery/force_fcr_update_ops
+    chown system system /sys/class/power_supply/battery/force_fcr_update_threshold
 
     chown system system /sys/class/power_supply/maxfg/fix_cycle_count
     chown system system /sys/class/power_supply/maxfg_base/fix_cycle_count
 
+    chown system system /sys/class/power_supply/maxfg/aafv_config
+    chown system system /sys/class/power_supply/maxfg_base/aafv_config
+    chown system system /sys/class/power_supply/max77779fg/aafv_config

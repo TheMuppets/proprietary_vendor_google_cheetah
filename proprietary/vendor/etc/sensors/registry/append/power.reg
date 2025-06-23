@@ -1,5 +1,5 @@
 #
-# Common configuration registry script.
+# Common power configuration registry script.
 #
 +/power
   mips_vote_per_sampling_rate=0.4

@@ -2,13 +2,36 @@ on property:vendor.all.modules.ready=1
     mkdir /data/vendor/mitigation 0755 system system
     chown system system /data/vendor/mitigation
     chown system system /sys/devices/virtual/pmic/mitigation/br_stats/enable_br_stats
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/uvlo1_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/uvlo2_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo1_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo2_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/smpl_triggered
     start vendor.battery_mitigation
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,if,otg && property:sys.boot.reason=reboot,uvlo,pmic,if,otg
+    setprop vendor.brownout_reason "uvlo,pmic,if,otg"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,if,usb && property:sys.boot.reason=reboot,uvlo,pmic,if,usb
+    setprop vendor.brownout_reason "uvlo,pmic,if,usb"
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,if && property:sys.boot.reason=reboot,uvlo,pmic,if
     setprop vendor.brownout_reason "uvlo,pmic,if"
 
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp,pmic,if,otg && property:sys.boot.reason=reboot,ocp,pmic,if,otg
+    setprop vendor.brownout_reason "ocp,pmic,if,otg"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp,pmic,if,usb && property:sys.boot.reason=reboot,ocp,pmic,if,usb
+    setprop vendor.brownout_reason "ocp,pmic,if,usb"
+
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp,pmic,if && property:sys.boot.reason=reboot,ocp,pmic,if
     setprop vendor.brownout_reason "ocp,pmic,if"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp2,pmic,if,otg && property:sys.boot.reason=reboot,ocp2,pmic,if,otg
+    setprop vendor.brownout_reason "ocp2,pmic,if,otg"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp2,pmic,if,usb && property:sys.boot.reason=reboot,ocp2,pmic,if,usb
+    setprop vendor.brownout_reason "ocp2,pmic,if,usb"
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp2,pmic,if && property:sys.boot.reason=reboot,ocp2,pmic,if
     setprop vendor.brownout_reason "ocp2,pmic,if"

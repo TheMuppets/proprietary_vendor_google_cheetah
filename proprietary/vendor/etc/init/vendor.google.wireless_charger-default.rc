@@ -2,3 +2,19 @@ service wireless_charger_AIDL /vendor/bin/hw/vendor.google.wireless_charger-defa
     class charger hal
     user system
     group system
+
+on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
+    chown system system /sys/class/power_supply/wireless/capacity
+    chown system system /sys/class/power_supply/wireless/device/rtx
+    chown system system /sys/class/power_supply/wireless/device/rxdata
+    chown system system /sys/class/power_supply/wireless/device/txdata
+    chown system system /sys/class/power_supply/wireless/device/rxlen
+    chown system system /sys/class/power_supply/wireless/device/txlen
+    chown system system /sys/class/power_supply/wireless/device/ccreset
+    chown system system /sys/class/power_supply/wireless/device/status
+    chown system system /sys/class/power_supply/wireless/device/version
+    chown system system /sys/class/power_supply/wireless/device/features
+    chown system system /sys/class/power_supply/wireless/device/authtype
+    chown system system /sys/class/power_supply/wireless/device/authstart
+    chown system system /sys/class/power_supply/wireless/device/stream
+    chown system system /sys/class/power_supply/wireless/device/fwupdate_data

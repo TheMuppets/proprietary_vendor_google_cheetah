@@ -1,0 +1,5 @@
+service vendor.memtrack-default /vendor/bin/hw/android.hardware.memtrack-service.pixel
+    class hal
+    user graphics
+    group system
+    task_profiles ServiceCapacityLow

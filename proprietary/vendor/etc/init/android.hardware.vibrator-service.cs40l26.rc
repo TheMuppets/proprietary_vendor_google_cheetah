@@ -21,13 +21,6 @@ service vendor.vibrator.cs40l26 /vendor/bin/hw/android.hardware.vibrator-service
         default/f0_comp_enable
         default/redc_comp_enable
         default/delay_before_stop_playback_us
-        dbc/dbc_env_rel_coef
-        dbc/dbc_rise_headroom
-        dbc/dbc_fall_headroom
-        dbc/dbc_tx_lvl_thresh_fs
-        dbc/dbc_tx_lvl_hold_off_ms
-        default/pm_active_timeout_ms
-        dbc/dbc_enable
         "
 
     setenv STATS_INSTANCE default

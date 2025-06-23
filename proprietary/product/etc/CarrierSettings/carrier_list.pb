@@ -8,6 +8,10 @@ test001_zz
 00101
 
 
+test001_zz
+00111
+
+
 telekom_gr
 20201
 
@@ -33,6 +37,11 @@ enreach_nl
 
 verizon_us
 20404"BAE0000000000000
+!
+
+webbing_hk
+20404"
+536E617065
 
 20404GID1=2801
 20404"2801
@@ -175,6 +184,9 @@ $
 
 proximus_be
 20601
+
+	mettel_us
+206018"8915518F
 
 
 telenet_be
@@ -214,6 +226,9 @@ telavox_be
 webbing_hk
 20801"
 536E617065
+
+	mettel_us
+20801"8915518F
 
 20801GID1=33
 20801"33
@@ -478,6 +493,9 @@ $
 
 21406
 21406
+
+	mettel_us
+21407"8915518F
 
 t2_es
 21407
@@ -649,6 +667,11 @@ telekom_hr
 coopvoce_it
 22201"434F4F50FFFFFFFFFF
 !
+
+webbing_hk
+22201"
+536E617065
+!
 tango_us
 22201222013071390
 !
@@ -708,6 +731,10 @@ telekom_hr
 &
 22201SPN=IUSACELL
 22201IUSACELL
+
+
+vianova_it
+22201vianova
 
 	gigsky_us
 22201GigSky
@@ -740,6 +767,10 @@ $
 lycamobile_it
 22235
 Lycamobile
+
+
+vianova_it
+22249vianova
 
 iliad_it
 22250"F003
@@ -877,8 +908,8 @@ $
 lycamobile_at
 23208
 Lycamobile
-
-a1_at
+
+a1mpn_at
 23209
 
 fi_at
@@ -964,6 +995,9 @@ webbing_hk
 
 23411
 23411
+
+	esimgo_gb
+23415"0033
 
 23415GID1=70
 23415"70
@@ -982,6 +1016,9 @@ webbing_hk
 ,
 23415SPN=SAINSBURY'S
 23415SAINSBURY'S
+
+	esimgo_gb
+23415eSIM Go
 
 	lebara_gb
 23415LEBARA
@@ -1143,6 +1180,9 @@ LycaMobile
 
 ee_gb
 23486
+
+	lebara_gb
+23487
 
 vodafone_gb
 23491
@@ -1689,6 +1729,14 @@ telekom_al
 
 magticom_ge
 28202
+
+
+cellfie_ge
+28204Cellfie
+
+
+cellfie_ge
+28204
 
 
 beeline_am
@@ -1727,8 +1775,8 @@ vivacom_bg
 
 nema_fo
 28802
-
-29001
+
+	tusass_gl
 29001
 
 a1_si
@@ -2045,6 +2093,9 @@ $
 
 carolinawest_us
 310130
+
+gta_us
+310140
 
 cricket5g_us
 310150"53FF
@@ -2111,6 +2162,9 @@ tmobile_us
 
 assurance_us
 310240"1A53
+
+	humane_us
+310240"2501
 (
 consumercellulartmo_us
 310240"2AC9
@@ -2162,9 +2216,33 @@ tmomvno_us
 
 tmomvno_us
 310240"6135
+
+kajeetmvno_us
+310240"6136
+
+rockisland_us
+310240"6137
 
 boosttmo_us
 310240"6230
+
+rockisland_us
+310240"6514
+
+reach_us
+310240"6523
+!
+fliggsmobile_us
+310240"6528
+
+nymobile_us
+310240"6529
+
+roccstar_us
+310240"6801
+
+smartless_us
+310240"6802
 
 pwg_us
 310240"6901
@@ -2192,12 +2270,30 @@ tmomvno_us
 &
 321communications_us
 310240"6912
+)
+reallycommunications_us
+310240"6913
+
+	joonto_us
+310240"6914
+!
+fliggsmobile_us
+310240"6916
+
+roccstar_us
+310240"6918
+
+nymobile_us
+310240"6919
 
 tello_us
 310240"6941
 
 iwireless_us
 310240"6957
+
+reach_us
+310240"6972
 
 lyca_us
 310240"6C79
@@ -2231,12 +2327,24 @@ tmomvno_us
 
 tmomvno_us
 310240"7A73
+
+bark_us
+310240"8135
+
+	joonto_us
+310240"8525
+)
+reallycommunications_us
+310240"8550
  
 tracfonetmo_us
 310240"DDFF
  
 tracfonetmo_us
 310240"DEFF
+
+	humane_us
+310240"FFFF
 
 
 tmobile_us
@@ -2254,6 +2362,9 @@ tmobile_us
 
 assurance_us
 310260"1A53
+
+	humane_us
+310260"2501
 !
 310260GID1=2801
 310260"2801
@@ -2308,6 +2419,30 @@ tmomvno_us
 
 tmomvno_us
 310260"6135
+
+kajeetmvno_us
+310260"6136
+
+rockisland_us
+310260"6137
+
+rockisland_us
+310260"6514
+
+reach_us
+310260"6523
+!
+fliggsmobile_us
+310260"6528
+
+nymobile_us
+310260"6529
+
+roccstar_us
+310260"6801
+
+smartless_us
+310260"6802
 
 pwg_us
 310260"6901
@@ -2335,12 +2470,30 @@ tmomvno_us
 &
 321communications_us
 310260"6912
+)
+reallycommunications_us
+310260"6913
+
+	joonto_us
+310260"6914
+!
+fliggsmobile_us
+310260"6916
+
+roccstar_us
+310260"6918
+
+nymobile_us
+310260"6919
 
 tello_us
 310260"6941
 
 iwireless_us
 310260"6957
+
+reach_us
+310260"6972
 
 lyca_us
 310260"6C79
@@ -2374,12 +2527,24 @@ tmomvno_us
 
 tmomvno_us
 310260"7A73
+
+bark_us
+310260"8135
+
+	joonto_us
+310260"8525
+)
+reallycommunications_us
+310260"8550
  
 tracfonetmo_us
 310260"DDFF
  
 tracfonetmo_us
 310260"DEFF
+
+	humane_us
+310260"FFFF
 
 	fi_tmo_us
 31026031026097
@@ -2499,9 +2664,9 @@ tmobile_us
 
 310360
 310360
- 
-docomopacific_us
-310370"D1
+
+docomopacific_us
+310370
 !
 attbootstrap_us
 310380"39FF
@@ -2645,14 +2810,11 @@ att5gsa_us
 
 	viaero_us
 310450
- 
-docomopacific_us
-310470"D1
 $
 310470SPN=NTELOS
 310470NTELOS
-
-310470
+
+docomopacific_us
 310470
 
 310480
@@ -3519,6 +3681,12 @@ liberty_pr
 
 xfinity2_us
 314240
+
+	mettel_us
+314610"8915518F
+
+oxio_us
+314720
 
 	google_us
 315010
@@ -3544,12 +3712,44 @@ OPENMOBILE
 
 movistar_mx
 334030
-
-att_mx
+&
+att_mx
+334050"4154543547FFFFFFFF
+&
+sky_mx
+334050"424C5545FFFFFFFFFF
+,
+megamovil_mx
+334050"4D454741FFFFFFFFFF
+(
+newww_mx
+334050"4E45575757FFFFFFFF
+&
+wim_mx
+334050"4F4E45FFFFFFFFFFFF
+*
+
+ubixatt_mx
+334050"55424958FFFFFFFFFF
++
+yomobile_mx
+334050"594FFFFFFFFFFFFFFF
+'
+bait_mx
+334050"62616974FFFFFFFFFF
+&
+att_mx
+334050"FFFFFFFFFFFFFFFFFF
+
+attmvnos_mx
 334050
-
-334090
-334090
+(
+att4g_mx
+334090"FFFFFFFFFFFFFFFFFF
+
+
+alestra_mx
+334130
 %
 addinteli_mx
 334140CHAMO-MOVIL
@@ -3639,6 +3839,13 @@ walmart_mx
 
 altan_mx
 334140
+
+
+izziatt_mx
+334160
+
+oxio_us
+334170
 
 33805
 33805
@@ -4691,7 +4898,7 @@ telenor_pk
 41305
 41305
 
-41308
+h3_lk
 41308
 
 41401
@@ -6249,6 +6456,11 @@ Lycamobile
 
 oi_br
 72416
+!
+
+webbing_hk
+72418"
+536E617065
 
 72419
 72419
@@ -6290,8 +6502,8 @@ webbing_hk
 
 entel_cl
 73001
-
-73002
+
+movistar_cl
 73002
 
 claro_cl
@@ -6302,8 +6514,8 @@ webbing_hk
 
 73008
 73008
-
-73009
+
+wom_cl
 73009
 
 73010
@@ -6440,6 +6652,9 @@ webbing_hk
 
 74810
 74810
+
+	mettel_us
+90101"8915518F
 
 
 webbing_hk
@@ -6463,6 +6678,6 @@ webbing_hk
 
 skylo_zz
 90198
-
-verizononsitelte_us
-999480êÑ µÓ"√ﬂ¨ª
+1
+verizononsitelte_us
+999480"D100000000000000ù¸Ã‚Ñ"ÙÖôø

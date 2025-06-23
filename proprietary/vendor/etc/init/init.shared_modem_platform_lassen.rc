@@ -11,13 +11,12 @@ service init.shared_modem_platform_dumpstate /vendor/bin/shared_modem_platform -
     disabled
     oneshot
 
-# Create file directories for modem svc messages, sorted alphabetically
 on post-fs-data
+    # Remove the pid file on boot
+    rm /data/vendor/radio/shared_modem_platform_pid
+    # Create file directories for modem svc messages, sorted alphabetically
     mkdir /data/vendor/radio/modem_temp_file 0775 radio system
     mkdir /mnt/vendor/modem_userdata/replay 0775 radio system
-
-on boot
-    rm /data/vendor/radio/shared_modem_platform_pid
 
 on property:vendor.modem.crash_detected=1
     stop init.shared_modem_platform

@@ -2,9 +2,4 @@
     Input:
         vendor/google_devices/gs201/proprietary/gchips/tpu/tachyon/service/com.google.edgetpu.tachyon-service.xml
 -->
-<manifest version="9.0" type="device">
-    <hal format="aidl">
-        <name>com.google.edgetpu.tachyon</name>
-        <fqname>IComputeService/default</fqname>
-    </hal>
-</manifest>
+<manifest version="9.0" type="device"/>
