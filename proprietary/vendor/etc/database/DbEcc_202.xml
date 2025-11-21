@@ -15,8 +15,11 @@
     <EccEntry mnc="#R" number="112" category="0" condition="00000001" />
     <EccEntry mnc="#R" number="911" category="0" condition="00000001" />
     <EccEntry mnc="#R" number="100" category="0" condition="10010000" />
+    <EccEntry mnc="#R" number="197" category="0" condition="10010000" />
     <EccEntry mnc="#R" number="199" category="0" condition="10010000" />
     <EccEntry mnc="#R" number="166" category="0" condition="10010000" />
     <EccEntry mnc="#R" number="108" category="0" condition="10010000" />
     <EccEntry mnc="#R" number="1056" category="0" condition="10010000" />
+    <EccEntry mnc="#R" number="11188" category="0" condition="10010000" />
+    <EccEntry mnc="#R" number="116000" category="0" condition="10010000" />
 </EccTable>

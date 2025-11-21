@@ -27,6 +27,7 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/battery/aact_profile
     chown system system /sys/class/power_supply/battery/aacp_version
     chown system system /sys/class/power_supply/battery/aacp_opt_out
+    chown system system /sys/class/power_supply/battery/aacp_opt_out_cutoff_cycles
     chown system system /sys/class/power_supply/battery/bd_trickle_enable
     chown system system /sys/class/power_supply/battery/bd_trickle_recharge_soc
     chown system system /sys/class/power_supply/battery/bd_trickle_cnt
@@ -81,7 +82,6 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
 
     chown system system /sys/class/power_supply/battery/charge_to_limit
     chown system system /sys/class/power_supply/battery/force_fcr_update_ops
-    chown system system /sys/class/power_supply/battery/force_fcr_update_threshold
 
     chown system system /sys/class/power_supply/maxfg/fix_cycle_count
     chown system system /sys/class/power_supply/maxfg_base/fix_cycle_count
@@ -89,3 +89,12 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/maxfg/aafv_config
     chown system system /sys/class/power_supply/maxfg_base/aafv_config
     chown system system /sys/class/power_supply/max77779fg/aafv_config
+    chown system system /sys/class/power_supply/maxfg/bypass_chargelimit_fcn_delta
+    chown system system /sys/class/power_supply/maxfg_base/bypass_chargelimit_fcn_delta
+    chown system system /sys/class/power_supply/max77779fg/bypass_chargelimit_fcn_delta
+    chown system system /sys/class/power_supply/maxfg/bypass_chargelimit_cycle_delta
+    chown system system /sys/class/power_supply/maxfg_base/bypass_chargelimit_cycle_delta
+    chown system system /sys/class/power_supply/max77779fg/bypass_chargelimit_cycle_delta
+    chown system system /sys/class/power_supply/maxfg/bypass_chargelimit_ops
+    chown system system /sys/class/power_supply/maxfg_base/bypass_chargelimit_ops
+    chown system system /sys/class/power_supply/max77779fg/bypass_chargelimit_ops

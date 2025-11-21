@@ -133,6 +133,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
         <permission name="android.permission.BIND_WALLPAPER"/>
         <permission name="android.permission.WRITE_SETTINGS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
     </privapp-permissions>
 
@@ -156,6 +158,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.ACTIVITY_RECOGNITION"/>
         <permission name="android.permission.CALL_PRIVILEGED"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
@@ -249,6 +252,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
         <permission name="android.permission.CAPTURE_MEDIA_OUTPUT"/>
         <permission name="android.permission.CAPTURE_VOICE_COMMUNICATION_OUTPUT"/>
+        <permission name="android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.EXEMPT_FROM_AUDIO_RECORD_RESTRICTIONS"/>
         <permission name="android.permission.LOCATION_HARDWARE"/>
@@ -304,6 +308,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
         <permission name="android.permission.CAPTURE_VOICE_COMMUNICATION_OUTPUT"/>
+        <permission name="android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION"/>
         <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
@@ -330,6 +335,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
@@ -518,6 +524,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CALL_PRIVILEGED"/>
         <permission name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION"/>
         <permission name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
         <permission name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
@@ -667,13 +674,16 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
         <permission name="android.permission.LOCATION_HARDWARE"/>
         <permission name="android.permission.MANAGE_USB"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.POWER_SAVER"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.REQUEST_COMPANION_SELF_MANAGED"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.TETHER_PRIVILEGED"/>
         <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
     </privapp-permissions>
 
@@ -723,6 +733,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.USE_ON_DEVICE_INTELLIGENCE"/>
         <permission name="android.permission.WRITE_DEVICE_CONFIG"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.WRITE_SETTINGS_HOMEPAGE_DATA"/>
@@ -754,6 +765,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.REQUEST_NETWORK_SCORES"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
+        <permission name="android.permission.SET_BIOMETRIC_DIALOG_ADVANCED"/>
         <permission name="android.permission.SET_TIME"/>
         <permission name="android.permission.SET_TIME_ZONE"/>
         <permission name="android.permission.SHUTDOWN"/>
@@ -762,6 +774,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="com.android.settings.BATTERY_DATA"/>
         <permission name="com.android.settings.USE_BIOMETRIC_PROVIDER"/>
     </privapp-permissions>
 
@@ -804,6 +817,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CAPTURE_VOICE_COMMUNICATION_OUTPUT"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION"/>
         <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.BATTERY_STATS"/>
@@ -855,6 +869,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
         <!-- Required to uninstall packages b/351949347. -->
         <permission name="android.permission.DELETE_PACKAGES"/>
+        <!-- Required to forceStopPackage, b/404697017. -->
+        <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="android.permission.INSTALL_PACKAGES"/>
         <!-- Required to start activity as user in HSUM b/361242510 -->
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
@@ -928,6 +944,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_SYSTEM_PREFERENCES"/>
         <!-- Used to get pending system update -->
         <permission name="android.permission.NOTIFY_PENDING_SYSTEM_UPDATE"/>
+        <!-- Used to open the factory reset page -->
+        <permission name="android.permission.MASTER_CLEAR"/>
+        <!-- To launch the bluetooth settings page -->
+        <permission name="android.permission.BLUETOOTH_CONNECT" />
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.nest.dockmanager.app">

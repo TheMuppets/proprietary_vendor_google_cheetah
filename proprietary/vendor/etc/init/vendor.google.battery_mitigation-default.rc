@@ -1,5 +1,8 @@
 on property:vendor.all.modules.ready=1
     mkdir /data/vendor/mitigation 0755 system system
+    rm /data/vendor/mitigation/thismeal_bak.bin
+    copy /data/vendor/mitigation/thismeal.bin /data/vendor/mitigation/thismeal_bak.bin
+    chown system system /data/vendor/mitigation/thismeal_bak.bin
     chown system system /data/vendor/mitigation
     chown system system /sys/devices/virtual/pmic/mitigation/br_stats/enable_br_stats
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/uvlo1_triggered
@@ -7,6 +10,23 @@ on property:vendor.all.modules.ready=1
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo1_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo2_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/smpl_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_cpu1_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_cpu2_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_gpu_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_tpu_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/smpl_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/soft_ocp_cpu1_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/soft_ocp_cpu2_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/soft_ocp_gpu_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/soft_ocp_tpu_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/uvlo1_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/uvlo2_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_rel/uvlo1_rel
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_rel/uvlo2_rel
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/smpl_det
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/uvlo1_det
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/uvlo2_det
     start vendor.battery_mitigation
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,if,otg && property:sys.boot.reason=reboot,uvlo,pmic,if,otg

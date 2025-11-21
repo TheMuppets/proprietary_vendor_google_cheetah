@@ -1,5 +1,5 @@
 
-	airbus_de‚øÌâ„
+	airbus_de‚ £œŒ
 aircraftaircraftpx
 
 industrialninPpx

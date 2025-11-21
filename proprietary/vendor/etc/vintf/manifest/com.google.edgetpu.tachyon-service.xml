@@ -1,5 +1,0 @@
-<!--
-    Input:
-        vendor/google_devices/gs201/proprietary/gchips/tpu/tachyon/service/com.google.edgetpu.tachyon-service.xml
--->
-<manifest version="9.0" type="device"/>

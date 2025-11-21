@@ -9,3 +9,6 @@ service hal_wlcservice /vendor/bin/hw/vendor.google.wireless_charger.service-def
     user system
     group system
     file /dev/kmsg w
+
+on property:vendor.wlcservice.start=1
+    start hal_wlcservice

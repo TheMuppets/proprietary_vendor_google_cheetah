@@ -857,6 +857,9 @@ sunrise_ch
 
 spusu_ch
 22871
+
+iway_ch
+22873
 
 
 tmobile_cz
@@ -998,6 +1001,9 @@ webbing_hk
 
 	esimgo_gb
 23415"0033
+
+gigs_gb
+23415"22
 
 23415GID1=70
 23415"70
@@ -1022,6 +1028,9 @@ webbing_hk
 
 	lebara_gb
 23415LEBARA
+
+gigs_gb
+23415Gigs
 
 vodafone_gb
 23415
@@ -1483,11 +1492,11 @@ tinkoff_ru
 
 25704
 25704
-
-25901
+
+	orange_md
 25901
-
-25902
+
+moldcell_md
 25902
 
 25905
@@ -1698,12 +1707,11 @@ LycaMobile
 
 nova_is
 27411
-
-
-telekom_al
+
+one_al
 27601
-
-27602
+
+vodafone_al
 27602
 
 epic_mt
@@ -1717,8 +1725,8 @@ telekom_al
 
 	melita_mt
 27877
-
-28001
+
+cytamobile_cy
 28001
 
 28010
@@ -1824,6 +1832,9 @@ Lycamobile
 
 telekom_me
 29702
+
+mtel_me
+29703
 
 koodo_ca
 302220"4B4F
@@ -2162,9 +2173,6 @@ tmobile_us
 
 assurance_us
 310240"1A53
-
-	humane_us
-310240"2501
 (
 consumercellulartmo_us
 310240"2AC9
@@ -2240,9 +2248,6 @@ tmomvno_us
 
 roccstar_us
 310240"6801
-
-smartless_us
-310240"6802
 
 pwg_us
 310240"6901
@@ -2285,6 +2290,9 @@ tmomvno_us
 
 nymobile_us
 310240"6919
+
+smartless_us
+310240"6922
 
 tello_us
 310240"6941
@@ -2342,9 +2350,6 @@ tmomvno_us
  
 tracfonetmo_us
 310240"DEFF
-
-	humane_us
-310240"FFFF
 
 
 tmobile_us
@@ -2362,9 +2367,6 @@ tmobile_us
 
 assurance_us
 310260"1A53
-
-	humane_us
-310260"2501
 !
 310260GID1=2801
 310260"2801
@@ -2440,9 +2442,6 @@ tmomvno_us
 
 roccstar_us
 310260"6801
-
-smartless_us
-310260"6802
 
 pwg_us
 310260"6901
@@ -2485,6 +2484,9 @@ tmomvno_us
 
 nymobile_us
 310260"6919
+
+smartless_us
+310260"6922
 
 tello_us
 310260"6941
@@ -2542,9 +2544,6 @@ tmomvno_us
  
 tracfonetmo_us
 310260"DEFF
-
-	humane_us
-310260"FFFF
 
 	fi_tmo_us
 31026031026097
@@ -3743,9 +3742,9 @@ ubixatt_mx
 
 attmvnos_mx
 334050
-(
-att4g_mx
-334090"FFFFFFFFFFFFFFFFFF
+
+att4g_mx
+334090
 
 
 alestra_mx
@@ -3877,6 +3876,9 @@ digicel_fr
 
 342600
 342600
+
+apua_ag
+34403
 
 344920
 344920
@@ -4885,8 +4887,8 @@ telenor_pk
 
 41250
 41250
-
-41301
+
+slt_lk
 41301
 
 41302
@@ -4894,8 +4896,8 @@ telenor_pk
 
 41303
 41303
-
-41305
+
+	airtel_lk
 41305
 
 h3_lk
@@ -5091,8 +5093,8 @@ ooredoo_qa
 
 42901
 42901
-
-42902
+
+ncell_np
 42902
 
 42903
@@ -5296,7 +5298,7 @@ webbing_hk
 45403"
 3597BFD533
 
-45403
+h3_hk
 45403
 
 45404
@@ -6680,4 +6682,4 @@ webbing_hk
 90198
 1
 verizononsitelte_us
-999480"D100000000000000ù¸Ã‚Ñ"ÙÖôø
+999480"D100000000000000§§£úå"√ Ô¬
