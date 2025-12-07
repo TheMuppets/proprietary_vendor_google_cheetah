@@ -491,6 +491,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
     vendor/google/cheetah/proprietary/product/etc/firmware/music_detector.sound_model_2:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_2 \
     vendor/google/cheetah/proprietary/product/etc/firmware/music_detector.sound_model_tflite:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_tflite \
+    vendor/google/cheetah/proprietary/product/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     vendor/google/cheetah/proprietary/product/etc/permissions/androidx.camera.extensions.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/androidx.camera.extensions.impl.xml \
     vendor/google/cheetah/proprietary/product/etc/permissions/com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.omadm.service.xml \
     vendor/google/cheetah/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.connmo.xml \
@@ -521,6 +522,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/product/etc/sysconfig/pixel_experience_2022.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022.xml \
     vendor/google/cheetah/proprietary/product/etc/sysconfig/pixel_experience_2022_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022_midyear.xml \
     vendor/google/cheetah/proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-euiccpixel.xml \
+    vendor/google/cheetah/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google/cheetah/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/cheetah/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/google/cheetah/proprietary/system_ext/etc/permissions/com.android.omadm.radioconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.omadm.radioconfig.xml \
@@ -613,6 +615,7 @@ PRODUCT_PACKAGES += \
     oemrilhook \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
+    gs_watchdogd \
     vendor.google.edgetpu_app_service@1.0-service
 
 PRODUCT_PACKAGES += \
@@ -624,8 +627,31 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM.icd \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/HEADSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HEADSET.dat \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/mcps.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/mcps.dat \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
+    vendor/google/cheetah/proprietary/vendor/etc/aoc/smartfeature.gstf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/smartfeature.gstf \
     vendor/google/cheetah/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_policy_configuration_le_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_le_offload_disabled.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/google/cheetah/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GE2AE_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GE2AE_EU.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GE2AE_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GE2AE_US.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GFE4J_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GFE4J_JP.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GP4BC_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GP4BC_CA.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GP4BC_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GP4BC_EU.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/bluetooth_power_limits_GP4BC_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GP4BC_US.csv \
     vendor/google/cheetah/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
     vendor/google/cheetah/proprietary/vendor/etc/chre/activity.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.so \
     vendor/google/cheetah/proprietary/vendor/etc/chre/ambient_volume.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ambient_volume.napp_header \
@@ -735,19 +761,35 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/database/DbEcc_DEFAULT.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_DEFAULT.xml \
     vendor/google/cheetah/proprietary/vendor/etc/database/DbEcc_ICCID.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_ICCID.xml \
     vendor/google/cheetah/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
+    vendor/google/cheetah/proprietary/vendor/etc/display_colordata_boe-nt37290_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_boe-nt37290_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_colordata_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_colordata_sdc-s6e3hc3-c10_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_sdc-s6e3hc3-c10_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_colordata_sdc-s6e3hc4_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_sdc-s6e3hc4_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_golden_boe-nt37290_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_boe-nt37290_cal0.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/display_golden_sdc-s6e3hc4_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_sdc-s6e3hc4_cal0.pb \
     vendor/google/cheetah/proprietary/vendor/etc/displayconfig/display_id_4619827677550801152.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4619827677550801152.xml \
     vendor/google/cheetah/proprietary/vendor/etc/earcheek_classifier.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/earcheek_classifier.tflite \
+    vendor/google/cheetah/proprietary/vendor/etc/fstab.modem:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.modem \
+    vendor/google/cheetah/proprietary/vendor/etc/fstab.persist:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.persist \
+    vendor/google/cheetah/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
+    vendor/google/cheetah/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/gnss/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/lhd.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/gnss/scd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/scd.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google/cheetah/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.rlsservice-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.rlsservice-service-google-apex.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-uicc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-uicc-service.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
@@ -762,15 +804,31 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/fingerprint-goodix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-goodix.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/google.hardware.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@1.0-service.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/hw/init.cheetah.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.cheetah.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/hw/init.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/hw/init.gs201.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.storage.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/hw/init.gs201.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.usb.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/hw/init.pantah.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.pantah.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/hwc3-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-pixel.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aoc.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.modem.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.modem_logging_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem_logging_control.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.module.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.module.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.pixel-perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-perf.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.shared_modem_platform_l.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.shared_modem_platform_l.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.sscoredump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sscoredump.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/init.touch.syna.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.syna.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init.vendor_telephony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor_telephony.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/pixelstats-vendor.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.gs201.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/pktrouter.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pktrouter.rc \
@@ -779,6 +837,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/init/rfsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rfsd.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/rild_exynos.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild_exynos.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/init/storage.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/storage.gs201.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/trusty_metricsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusty_metricsd.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/twoshay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/twoshay.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
@@ -790,8 +849,33 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/init/vendor.google.wireless_charger-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wireless_charger-default.rc \
     vendor/google/cheetah/proprietary/vendor/etc/init/vendor.google.wireless_charger.service-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wireless_charger.service-default.rc \
     vendor/google/cheetah/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
+    vendor/google/cheetah/proprietary/vendor/etc/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
+    vendor/google/cheetah/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
+    vendor/google/cheetah/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
+    vendor/google/cheetah/proprietary/vendor/etc/libnfc-hal-st-proto1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-proto1.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google/cheetah/proprietary/vendor/etc/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/google/cheetah/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/Pixel_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.nprf \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/camera_front_dbr_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_dbr_coex_table.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/camera_front_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_mipi_coex_table.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/camera_rear_tele_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_tele_mipi_coex_table.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.cfg \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.nprf \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/display_primary_osc_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_osc_coex_table.csv \
+    vendor/google/cheetah/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
     vendor/google/cheetah/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google/cheetah/proprietary/vendor/etc/open_carrier_info.dat:$(TARGET_COPY_OUT_VENDOR)/etc/open_carrier_info.dat \
     vendor/google/cheetah/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
@@ -799,7 +883,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml \
     vendor/google/cheetah/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     vendor/google/cheetah/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2022.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2022.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
     vendor/google/cheetah/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
+    vendor/google/cheetah/proprietary/vendor/etc/powerhint-a0.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-a0.json \
+    vendor/google/cheetah/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     vendor/google/cheetah/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/google/cheetah/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/google/cheetah/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
@@ -814,13 +901,79 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/etc/sensors/registry/cheetah_evt_1_1_win.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/cheetah_evt_1_1_win.reg \
     vendor/google/cheetah/proprietary/vendor/etc/sensors/registry/cheetah_evt_a0.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/cheetah_evt_a0.reg \
     vendor/google/cheetah/proprietary/vendor/etc/sensors/registry/cheetah_proto.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/cheetah_proto.reg \
+    vendor/google/cheetah/proprietary/vendor/etc/sound_trigger_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_configuration.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
     vendor/google/cheetah/proprietary/vendor/etc/tcm_test_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg.ini \
     vendor/google/cheetah/proprietary/vendor/etc/tcm_test_cfg_g10.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg_g10.ini \
+    vendor/google/cheetah/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    vendor/google/cheetah/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+    vendor/google/cheetah/proprietary/vendor/etc/thermal_info_config_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json \
     vendor/google/cheetah/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
     vendor/google/cheetah/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
+    vendor/google/cheetah/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-am.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-am.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-at.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-at.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-az.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-az.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-be.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-be.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-bg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-bg.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-by.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-by.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ca.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ca.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ch.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ch.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-cy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cy.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-cz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cz.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-de.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-de.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-default.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-dk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-dk.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ee.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ee.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-es.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-es.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-fi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fi.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-fr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fr.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-gb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gb.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-gr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gr.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-hr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hr.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-hu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hu.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-id.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-id.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ie.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ie.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-is.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-is.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-it.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-it.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-jp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-jp.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-kg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kg.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-kz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kz.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-li.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-li.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-lt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lt.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-lu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lu.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-lv.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lv.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-mt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-mt.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ni.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ni.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-nl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-nl.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-no.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-no.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-np.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-np.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-pl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pl.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-pt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pt.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ro.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ro.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ru.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ru.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-se.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-se.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-si.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-si.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-sk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-sk.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-tj.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tj.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-tm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tm.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-tw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tw.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-ua.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ua.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-unknown.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-unknown.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-us.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-us.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration-uz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-uz.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/uwb/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration.conf \
     vendor/google/cheetah/proprietary/vendor/etc/uwb/calib_paths:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calib_paths \
     vendor/google/cheetah/proprietary/vendor/etc/uwb/libuwb-uci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/libuwb-uci.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/waves_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config.ini \
+    vendor/google/cheetah/proprietary/vendor/etc/waves_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset.mps \
+    vendor/google/cheetah/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml \
+    vendor/google/cheetah/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/google/cheetah/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/google/cheetah/proprietary/vendor/firmware/MICRONMT128GAXAT2U310104_MICRONMT256GAXAT4U310104.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GAXAT2U310104_MICRONMT256GAXAT4U310104.img \
+    vendor/google/cheetah/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/SensorHub.patch:$(TARGET_COPY_OUT_VENDOR)/firmware/SensorHub.patch \
     vendor/google/cheetah/proprietary/vendor/firmware/aoc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aoc.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd.cal \
@@ -2111,6 +2264,12 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/firmware/carrierconfig/manifests/fe5aeb9109f49131d2ca6dc4033d7e74272081a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe5aeb9109f49131d2ca6dc4033d7e74272081a1 \
     vendor/google/cheetah/proprietary/vendor/firmware/carrierconfig/manifests_symbolic_link_mapping:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests_symbolic_link_mapping \
     vendor/google/cheetah/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.wmfw \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
     vendor/google/cheetah/proprietary/vendor/firmware/cs40l26-calib.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.wmfw \
     vendor/google/cheetah/proprietary/vendor/firmware/cs40l26-dvl.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-dvl.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/cs40l26-svc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-svc.bin \
@@ -2119,6 +2278,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/cheetah/proprietary/vendor/firmware/dauntless/d3m2.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/d3m2.ec.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/dauntless/evt.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/evt.ec.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/dauntless/proto11.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/proto11.ec.bin \
+    vendor/google/cheetah/proprietary/vendor/firmware/fast_switch1.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch1.txt \
+    vendor/google/cheetah/proprietary/vendor/firmware/fast_switch2.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch2.txt \
+    vendor/google/cheetah/proprietary/vendor/firmware/fast_switch3.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch3.txt \
+    vendor/google/cheetah/proprietary/vendor/firmware/fast_switch4.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch4.txt \
     vendor/google/cheetah/proprietary/vendor/firmware/filter_ie:$(TARGET_COPY_OUT_VENDOR)/firmware/filter_ie \
     vendor/google/cheetah/proprietary/vendor/firmware/fw_bcmdhd.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.bin \
     vendor/google/cheetah/proprietary/vendor/firmware/fw_bcmdhd.map:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.map \
@@ -2314,6 +2477,11 @@ PRODUCT_PACKAGES += \
     libsueznanoappclients \
     libusf \
     libvendorgraphicbuffer \
+    modem_android_property_manager \
+    modem_android_property_manager_impl \
+    modem_clock_manager \
+    modem_clock_manager_impl \
+    modem_log_constants \
     sensors.usf \
     liboffloadeffect \
     libspatialaudio \
@@ -2332,6 +2500,8 @@ PRODUCT_PACKAGES += \
     PixelVibratorFlagsL26 \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
+    android.hardware.power.stats-impl.gs-common \
+    android.hardware.power.stats-impl.gs201 \
     android.hardware.security.keymint-impl.nos \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
@@ -2360,6 +2530,7 @@ PRODUCT_PACKAGES += \
     libdeccfg \
     libdeeptouch \
     libdrmresource \
+    libdump \
     libedgetpu_tflite_compiler \
     libedgetpu_util \
     libexynosdisplay \
@@ -2380,6 +2551,7 @@ PRODUCT_PACKAGES += \
     libutils-default \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
     libwlcproto_aidl-default \
+    modem_log_dumper \
     vendor.google.audiometricext@1.0 \
     vendor.google.bluetooth_ext-V1-ndk \
     vendor.google.bluetooth_ext-V3-ndk \
@@ -2397,6 +2569,7 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.citadel.xml \
     android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
+    android.hardware.dumpstate-service.xml \
     android.hardware.gnss@2.1-service-brcm.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
@@ -2426,11 +2599,28 @@ PRODUCT_PACKAGES += \
     bipchmgr \
     cbd \
     dmd \
+    dump_aoc \
+    dump_devfreq \
+    dump_exynos_display \
+    dump_fingerprint \
+    dump_gsc \
+    dump_modemlog \
+    dump_perf \
+    dump_pixel_metrics \
+    dump_power \
+    dump_sensors \
+    dump_soc \
+    dump_storage \
+    dump_syna \
+    dump_thermal \
+    dump_trusty \
+    dump_umfw_stat \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.goodix \
     android.hardware.bluetooth-service.bcmbtlinux \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
+    android.hardware.dumpstate-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.gnss@2.1-service-brcm \
     android.hardware.graphics.allocator-V2-service \
@@ -2439,6 +2629,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
     android.hardware.oemlock-service.citadel \
+    android.hardware.power.stats-service.pixel \
     android.hardware.qorvo.uwb.service \
     android.hardware.secure_element@1.2-uicc-service \
     android.hardware.security.keymint-service.citadel \
@@ -2448,6 +2639,7 @@ PRODUCT_PACKAGES += \
     citadel_updater \
     citadeld \
     com.google.edgetpu.tachyon-service \
+    disable_contaminant_detection \
     google.hardware.media.c2@1.0-service \
     gpsd \
     init_citadel \
@@ -2463,7 +2655,10 @@ PRODUCT_PACKAGES += \
     vendor.google.wireless_charger-default \
     vendor.google.wireless_charger.service-default \
     init.camera.set-interrupts-ownership \
+    init.display \
     init.radio \
+    init.uwb.calib \
+    insmod \
     modem_logging_control \
     pixelstats-vendor \
     rfsd \
@@ -2472,6 +2667,7 @@ PRODUCT_PACKAGES += \
     sscoredump \
     trusty_metricsd \
     twoshay \
+    ufs_firmware_update \
     umfw_stat_tool \
     usf_stats \
     wfc-pkt-router

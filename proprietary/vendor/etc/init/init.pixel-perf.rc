@@ -1,0 +1,332 @@
+# Copyright (C) 2024 The Android Open-Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on init
+    chown system system /proc/vendor_sched/groups/bg/set_task_group
+    chown system system /proc/vendor_sched/groups/cam/set_task_group
+    chown system system /proc/vendor_sched/groups/fg/set_task_group
+    chown system system /proc/vendor_sched/groups/nnapi/set_task_group
+    chown system system /proc/vendor_sched/groups/sys/set_task_group
+    chown system system /proc/vendor_sched/groups/sys_bg/set_task_group
+    chown system system /proc/vendor_sched/groups/ta/set_task_group
+    chown system system /proc/vendor_sched/groups/rt/set_task_group
+    chown system system /proc/vendor_sched/groups/sf/set_task_group
+    chown system system /proc/vendor_sched/groups/dex2oat/set_task_group
+    chown system system /proc/vendor_sched/groups/cam_power/set_task_group
+    chown system system /proc/vendor_sched/groups/ota/set_task_group
+    chown system system /proc/vendor_sched/groups/fg_wi/set_task_group
+    chown system system /proc/vendor_sched/groups/bg/set_proc_group
+    chown system system /proc/vendor_sched/groups/cam/set_proc_group
+    chown system system /proc/vendor_sched/groups/fg/set_proc_group
+    chown system system /proc/vendor_sched/groups/nnapi/set_proc_group
+    chown system system /proc/vendor_sched/groups/sys/set_proc_group
+    chown system system /proc/vendor_sched/groups/sys_bg/set_proc_group
+    chown system system /proc/vendor_sched/groups/ta/set_proc_group
+    chown system system /proc/vendor_sched/groups/rt/set_proc_group
+    chown system system /proc/vendor_sched/groups/sf/set_proc_group
+    chown system system /proc/vendor_sched/groups/dex2oat/set_proc_group
+    chown system system /proc/vendor_sched/groups/cam_power/set_proc_group
+    chown system system /proc/vendor_sched/groups/ota/set_proc_group
+    chown system system /proc/vendor_sched/groups/fg_wi/set_proc_group
+    chown system system /proc/vendor_sched/prefer_idle_set
+    chown system system /proc/vendor_sched/prefer_idle_clear
+    chown system system /proc/vendor_sched/pmu_poll_enable
+    chown system system /proc/vendor_sched/pmu_poll_time
+    chown system system /proc/vendor_sched/uclamp_fork_reset_clear
+    chown system system /proc/vendor_sched/uclamp_fork_reset_set
+
+    chmod 0220 /proc/vendor_sched/groups/bg/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/cam/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/fg/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/nnapi/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/sys/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/sys_bg/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/ta/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/rt/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/sf/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/dex2oat/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/cam_power/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/ota/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/fg_wi/set_task_group
+    chmod 0220 /proc/vendor_sched/groups/bg/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/cam/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/fg/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/nnapi/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/sys/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/sys_bg/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/ta/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/rt/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/sf/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/dex2oat/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/cam_power/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/ota/set_proc_group
+    chmod 0220 /proc/vendor_sched/groups/fg_wi/set_proc_group
+    chmod 0220 /proc/vendor_sched/prefer_idle_set
+    chmod 0220 /proc/vendor_sched/prefer_idle_clear
+    chmod 0660 /proc/vendor_sched/pmu_poll_enable
+    chmod 0220 /proc/vendor_sched/pmu_poll_time
+    chmod 0220 /proc/vendor_sched/uclamp_fork_reset_clear
+    chmod 0220 /proc/vendor_sched/uclamp_fork_reset_set
+
+    # Change permission of sched qos nodes
+    chown system system /proc/vendor_sched/sched_qos/adpf_set
+    chown system system /proc/vendor_sched/sched_qos/adpf_clear
+    chown system system /proc/vendor_sched/sched_qos/auto_uclamp_max_set
+    chown system system /proc/vendor_sched/sched_qos/auto_uclamp_max_clear
+    chown system system /proc/vendor_sched/sched_qos/boost_prio_set
+    chown system system /proc/vendor_sched/sched_qos/boost_prio_clear
+    chown system system /proc/vendor_sched/sched_qos/preempt_wakeup_set
+    chown system system /proc/vendor_sched/sched_qos/preempt_wakeup_clear
+    chown system system /proc/vendor_sched/sched_qos/prefer_fit_set
+    chown system system /proc/vendor_sched/sched_qos/prefer_fit_clear
+    chown system system /proc/vendor_sched/sched_qos/prefer_high_cap_set
+    chown system system /proc/vendor_sched/sched_qos/prefer_high_cap_clear
+    chown system system /proc/vendor_sched/sched_qos/prefer_idle_set
+    chown system system /proc/vendor_sched/sched_qos/prefer_idle_clear
+    chown system system /proc/vendor_sched/sched_qos/rampup_multiplier_set
+    chown system system /proc/vendor_sched/sched_qos/rampup_multiplier_clear
+    chown system system /proc/vendor_sched/sched_qos/sched_qos_none
+    chown system system /proc/vendor_sched/sched_qos/sched_qos_power_efficiency
+    chown system system /proc/vendor_sched/sched_qos/sched_qos_sensitive_extreme
+    chown system system /proc/vendor_sched/sched_qos/sched_qos_sensitive_high
+    chown system system /proc/vendor_sched/sched_qos/sched_qos_sensitive_standard
+
+    chmod 0220 /proc/vendor_sched/sched_qos/adpf_set
+    chmod 0220 /proc/vendor_sched/sched_qos/adpf_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/auto_uclamp_max_set
+    chmod 0220 /proc/vendor_sched/sched_qos/auto_uclamp_max_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/boost_prio_set
+    chmod 0220 /proc/vendor_sched/sched_qos/boost_prio_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/preempt_wakeup_set
+    chmod 0220 /proc/vendor_sched/sched_qos/preempt_wakeup_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_fit_set
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_fit_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_high_cap_set
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_high_cap_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_idle_set
+    chmod 0220 /proc/vendor_sched/sched_qos/prefer_idle_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/rampup_multiplier_set
+    chmod 0220 /proc/vendor_sched/sched_qos/rampup_multiplier_clear
+    chmod 0220 /proc/vendor_sched/sched_qos/sched_qos_none
+    chmod 0220 /proc/vendor_sched/sched_qos/sched_qos_power_efficiency
+    chmod 0220 /proc/vendor_sched/sched_qos/sched_qos_sensitive_extreme
+    chmod 0220 /proc/vendor_sched/sched_qos/sched_qos_sensitive_high
+    chmod 0220 /proc/vendor_sched/sched_qos/sched_qos_sensitive_standard
+
+    # Enable sched_qos for some groups
+    write /proc/vendor_sched/groups/ta/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/ta/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/ta/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/ta/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/ta/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/ta/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/ta/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/ta/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/fg/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/fg/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/fg/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/fg/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/fg/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/fg/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/fg/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/fg/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/fg_wi/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/cam/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/cam/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/cam/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/cam/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/cam/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/cam/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/cam/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/cam/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/cam_power/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/rt/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/rt/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/rt/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/rt/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/rt/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/rt/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/rt/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/rt/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/sf/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/sf/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/sf/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/sf/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/sf/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/sf/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/sf/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/sf/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/sys/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/sys/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/sys/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/sys/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/sys/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/sys/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/sys/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/sys/qos_rampup_multiplier_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_adpf_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_auto_uclamp_max_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_boost_prio_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_preempt_wakeup_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_prefer_fit_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_prefer_high_cap_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_prefer_idle_enable 1
+    write /proc/vendor_sched/groups/nnapi/qos_rampup_multiplier_enable 1
+
+    # cpufreq governor setting
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor sched_pixel
+    write /sys/devices/system/cpu/cpu8/cpufreq/scaling_governor sched_pixel
+
+    write /sys/devices/system/cpu/cpu0/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu1/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu2/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu3/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu5/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu6/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu7/cpufreq/sched_pixel/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu8/cpufreq/sched_pixel/up_rate_limit_us 500
+
+    write /sys/devices/system/cpu/cpu0/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu1/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu2/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu3/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu5/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu6/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu7/cpufreq/sched_pixel/down_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu8/cpufreq/sched_pixel/down_rate_limit_us 500
+
+    # Default rampup multiplier setup
+    write /proc/vendor_sched/groups/bg/rampup_multiplier 0
+    write /proc/vendor_sched/groups/cam/rampup_multiplier 1
+    write /proc/vendor_sched/groups/cam_power/rampup_multiplier 1
+    write /proc/vendor_sched/groups/dex2oat/rampup_multiplier 0
+    write /proc/vendor_sched/groups/fg/rampup_multiplier 0
+    write /proc/vendor_sched/groups/fg_wi/rampup_multiplier 1
+    write /proc/vendor_sched/groups/nnapi/rampup_multiplier 0
+    write /proc/vendor_sched/groups/ota/rampup_multiplier 0
+    write /proc/vendor_sched/groups/rt/rampup_multiplier 0
+    write /proc/vendor_sched/groups/sf/rampup_multiplier 1
+    write /proc/vendor_sched/groups/sys/rampup_multiplier 0
+    write /proc/vendor_sched/groups/sys_bg/rampup_multiplier 0
+    write /proc/vendor_sched/groups/ta/rampup_multiplier 1
+    write /proc/vendor_sched/adpf_rampup_multiplier 4
+
+    # Default util_est setup
+    write /proc/vendor_sched/groups/bg/disable_util_est 1
+    write /proc/vendor_sched/groups/cam/disable_util_est 0
+    write /proc/vendor_sched/groups/cam_power/disable_util_est 0
+    write /proc/vendor_sched/groups/dex2oat/disable_util_est 1
+    write /proc/vendor_sched/groups/fg/disable_util_est 1
+    write /proc/vendor_sched/groups/fg_wi/disable_util_est 0
+    write /proc/vendor_sched/groups/nnapi/disable_util_est 1
+    write /proc/vendor_sched/groups/ota/disable_util_est 1
+    write /proc/vendor_sched/groups/rt/disable_util_est 1
+    write /proc/vendor_sched/groups/sf/disable_util_est 0
+    write /proc/vendor_sched/groups/sys/disable_util_est 1
+    write /proc/vendor_sched/groups/sys_bg/disable_util_est 1
+    write /proc/vendor_sched/groups/ta/disable_util_est 0
+
+    # Default sched_batch setup
+    write /proc/vendor_sched/groups/bg/use_batch_policy 1
+    write /proc/vendor_sched/groups/cam/use_batch_policy 0
+    write /proc/vendor_sched/groups/cam_power/use_batch_policy 0
+    write /proc/vendor_sched/groups/dex2oat/use_batch_policy 0
+    write /proc/vendor_sched/groups/fg/use_batch_policy 0
+    write /proc/vendor_sched/groups/fg_wi/use_batch_policy 0
+    write /proc/vendor_sched/groups/nnapi/use_batch_policy 0
+    write /proc/vendor_sched/groups/ota/use_batch_policy 0
+    write /proc/vendor_sched/groups/rt/use_batch_policy 0
+    write /proc/vendor_sched/groups/sf/use_batch_policy 0
+    write /proc/vendor_sched/groups/sys/use_batch_policy 0
+    write /proc/vendor_sched/groups/sys_bg/use_batch_policy 1
+    write /proc/vendor_sched/groups/ta/use_batch_policy 0
+
+    # RT uclamp setting
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
+
+    write /proc/vendor_sched/groups/cam/prefer_idle 1
+    write /proc/vendor_sched/groups/cam/uclamp_min 1
+
+    chown system system /dev/cpuset/cgroup.procs
+
+    # Add a boost for NNAPI HAL
+    write /proc/vendor_sched/groups/nnapi/prefer_idle 0
+    write /proc/vendor_sched/groups/nnapi/uclamp_min 512
+
+on property:sys.boot_completed=1
+
+    # Setup scheduler parameters
+    write /proc/vendor_sched/min_granularity_ns 1000000
+    write /proc/vendor_sched/latency_ns 8000000
+    write /proc/vendor_sched/max_load_balance_interval 1
+    write /proc/vendor_sched/enable_hrtick 1
+
+    # Setup final cpu.uclamp
+    write /proc/vendor_sched/groups/ta/uclamp_min 1
+    write /proc/vendor_sched/groups/fg/uclamp_min 0
+    write /proc/vendor_sched/groups/sys/prefer_idle 0
+
+    # Set ug group
+    write /proc/vendor_sched/groups/bg/ug 0
+    write /proc/vendor_sched/groups/sys_bg/ug 0
+    write /proc/vendor_sched/groups/ota/ug 0
+    write /proc/vendor_sched/groups/dex2oat/ug 1
+    write /proc/vendor_sched/groups/ta/ug 1
+
+    # Set bg group throttle
+    write /proc/vendor_sched/ug_bg_group_throttle ${persist.device_config.vendor_system_native.ug_bg_group_throttle:-308}
+
+    # Disable PMU freq limit
+    write /sys/devices/system/cpu/cpufreq/policy0/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy1/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy2/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy3/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy4/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy5/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy6/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy7/sched_pixel/pmu_limit_enable 1
+    write /sys/devices/system/cpu/cpufreq/policy8/sched_pixel/pmu_limit_enable 1
+    write /proc/vendor_sched/pmu_poll_enable 0
+
+    # Set priority task name and boost value
+    write /proc/vendor_sched/priority_task_name "ExoPlayer:Place"
+    write /proc/vendor_sched/priority_task_boost_value 742
+
+    write /proc/vendor_sched/boost_at_fork_task_name "_zygote"
+    write /proc/vendor_sched/boost_at_fork_value 768
+    write /proc/vendor_sched/boost_at_fork_duration 1000
+
