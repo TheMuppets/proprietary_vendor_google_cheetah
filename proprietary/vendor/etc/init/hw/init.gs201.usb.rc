@@ -81,6 +81,7 @@ on early-boot
     mkdir /config/usb_gadget/g1/functions/uvc.0/control/header/h
     symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/fs/h
     symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/ss/h
+    # advertise mjpeg streams
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m
     # advertise 360p resolution for webcam encoded as mjpeg
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p
@@ -122,10 +123,32 @@ on early-boot
 333333
 416666
 666666"
-    # TODO: Add uncompressed streams
+    # advertise uncompressed streams
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u
+    # advertise 360p resolution for webcam encoded as yuyv
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wHeight 360
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wWidth 640
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxVideoFrameBufferSize 460800
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwDefaultFrameInterval 333333
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwFrameInterval "166666
+333333
+416666
+666666"
+    # advertise 480p resolution for webcam encoded as yuyv
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wHeight 480
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wWidth 640
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxVideoFrameBufferSize 614400
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwDefaultFrameInterval 333333
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwFrameInterval "166666
+333333
+416666
+666666"
     # setup streaming params
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/header/h
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/m
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/u
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs/h
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/hs/h
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/ss/h
@@ -137,6 +160,7 @@ on early-boot
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming_interval
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/bFrameIndex
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/bmCapabilities
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwDefaultFrameInterval
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwFrameInterval
@@ -145,6 +169,7 @@ on early-boot
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMinBitRate
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wHeight
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/bFrameIndex
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/bmCapabilities
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwDefaultFrameInterval
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwFrameInterval
@@ -153,6 +178,7 @@ on early-boot
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwMinBitRate
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/wHeight
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/bFrameIndex
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/bmCapabilities
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwDefaultFrameInterval
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwFrameInterval
@@ -161,6 +187,7 @@ on early-boot
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwMinBitRate
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/wHeight
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/bFrameIndex
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/bmCapabilities
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwDefaultFrameInterval
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwFrameInterval
@@ -169,9 +196,39 @@ on early-boot
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMinBitRate
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wHeight
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bAspectRatioX
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bAspectRatioY
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bDefaultFrameIndex
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bFormatIndex
     chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmaControls
-
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmFlags
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmInterlaceFlags
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/bFrameIndex
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/bmCapabilities
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwDefaultFrameInterval
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwFrameInterval
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxBitRate
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxVideoFrameBufferSize
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMinBitRate
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wHeight
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/bFrameIndex
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/bmCapabilities
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwDefaultFrameInterval
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwFrameInterval
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxBitRate
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxVideoFrameBufferSize
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMinBitRate
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wHeight
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wWidth
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bAspectRatioX
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bAspectRatioY
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bBitsPerPixel
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bDefaultFrameIndex
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bFormatIndex
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bmaControls
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bmInterlaceFlags
+    chmod 664 /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/guidFormat
 
     # chown file/folder permission
     chown system system /config/usb_gadget/
@@ -237,7 +294,7 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/rndis.gs4/protocol
     chown system system /config/usb_gadget/g1/functions/rndis.gs4/qmult
     chown system system /config/usb_gadget/g1/functions/rndis.gs4/subclass
-    chown system system /config/usb_gadget/g1/functions/uvc.0/
+    chown system system /config/usb_gadget/g1/functions/uvc.0
     chown system system /config/usb_gadget/g1/functions/uvc.0/control
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/bInterfaceNumber
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/class
@@ -245,6 +302,8 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/class/fs/h
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/class/ss
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/class/ss/h
+    chown system system /config/usb_gadget/g1/functions/uvc.0/control/enable_interrupt_ep
+    chown system system /config/usb_gadget/g1/functions/uvc.0/control/extensions
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/header
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/header/h
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/header/h/bcdUVC
@@ -276,9 +335,6 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/terminal/output/default/wTerminalType
     chown system system /config/usb_gadget/g1/functions/uvc.0/function_name
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming
-    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_interval
-    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst
-    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/bInterfaceNumber
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/class
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs
@@ -292,6 +348,7 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/color_matching/default/bColorPrimaries
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/color_matching/default/bMatrixCoefficients
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/color_matching/default/bTransferCharacteristics
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/framebased
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/bmInfo
@@ -300,6 +357,10 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/bTriggerSupport
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/bTriggerUsage
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/m
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/u
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_interval
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p
@@ -350,6 +411,35 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmFlags
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmInterlaceFlags
     chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/bFrameIndex
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/bmCapabilities
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwDefaultFrameInterval
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwFrameInterval
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxBitRate
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxVideoFrameBufferSize
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMinBitRate
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wHeight
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wWidth
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/bFrameIndex
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/bmCapabilities
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwDefaultFrameInterval
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwFrameInterval
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxBitRate
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxVideoFrameBufferSize
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMinBitRate
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wHeight
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wWidth
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bAspectRatioX
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bAspectRatioY
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bBitsPerPixel
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bDefaultFrameIndex
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bFormatIndex
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bmaControls
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/bmInterlaceFlags
+    chown system system /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/guidFormat
     chown system system /config/usb_gadget/g1/idProduct
     chown system system /config/usb_gadget/g1/idVendor
     chown system system /config/usb_gadget/g1/max_speed

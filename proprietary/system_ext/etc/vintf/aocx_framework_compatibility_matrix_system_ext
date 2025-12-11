@@ -1,0 +1,14 @@
+<!--
+    Input:
+        vendor/google/whitechapel/aoc/aocx/aidl/aocx/framework_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="aidl">
+        <name>aocx</name>
+        <version>1-2</version>
+        <interface>
+            <name>IAocx</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

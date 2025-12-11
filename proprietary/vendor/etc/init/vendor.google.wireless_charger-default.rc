@@ -18,3 +18,5 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/wireless/device/authstart
     chown system system /sys/class/power_supply/wireless/device/stream
     chown system system /sys/class/power_supply/wireless/device/fwupdate_data
+    chown system system /sys/class/power_supply/wireless/device/compatibility
+    chown system system /sys/class/power_supply/wireless/device/qispec

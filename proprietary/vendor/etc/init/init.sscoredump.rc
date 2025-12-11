@@ -1,7 +1,7 @@
 on post-fs-data
-    mkdir /data/vendor/ssrdump 0771 root system
-    mkdir /data/vendor/ssrdump/coredump 0771 root system
-    mkdir /data/vendor/ssrdump/logcat 0771 root system
+    mkdir /data/vendor/ssrdump 0775 root system
+    mkdir /data/vendor/ssrdump/coredump 0775 root system
+    mkdir /data/vendor/ssrdump/logcat 0775 root system
     restorecon /data/vendor/ssrdump
     start vendor.sscoredump
 

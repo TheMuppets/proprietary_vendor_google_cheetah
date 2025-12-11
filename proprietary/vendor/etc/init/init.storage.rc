@@ -84,3 +84,5 @@ on boot
     write /dev/sys/block/by-name/rootdisk/queue/iostats 1
     write /dev/sys/block/by-name/rootdisk/queue/read_ahead_kb 128
     write /dev/sys/block/by-name/userdata/queue/read_ahead_kb 128
+
+    mkdir /data/vendor/storage 0770 system system

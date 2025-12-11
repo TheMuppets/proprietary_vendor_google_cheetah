@@ -68,6 +68,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BIND_APPWIDGET"/>
         <permission name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.READ_REMOTE_TASKS"/>
+        <permission name="android.permission.REQUEST_TASK_HANDOFF"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.START_TASKS_FROM_RECENTS"/>
         <permission name="android.permission.STATUS_BAR"/>
@@ -288,5 +290,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <privapp-permissions package="com.android.multiuser">
         <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 </permissions>

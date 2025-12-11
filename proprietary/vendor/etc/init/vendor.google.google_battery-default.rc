@@ -28,11 +28,15 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/battery/aacp_version
     chown system system /sys/class/power_supply/battery/aacp_opt_out
     chown system system /sys/class/power_supply/battery/aacp_opt_out_cutoff_cycles
+    chown system system /sys/class/power_supply/battery/aacc_chg_profile
     chown system system /sys/class/power_supply/battery/bd_trickle_enable
     chown system system /sys/class/power_supply/battery/bd_trickle_recharge_soc
     chown system system /sys/class/power_supply/battery/bd_trickle_cnt
     chown system system /sys/class/power_supply/battery/bd_trickle_dry_run
     chown system system /sys/class/power_supply/battery/bd_trickle_reset_sec
+    chown system system /sys/class/power_supply/battery/bd_trickle_version
+    chown system system /sys/class/power_supply/battery/bd_trickle_rate
+    chown system system /sys/class/power_supply/battery/bd_trickle_cnt_thr
     chown system system /sys/class/power_supply/battery/health_safety_margin
     chown system system /sys/class/power_supply/battery/health_algo
     chown system system /sys/class/power_supply/battery/health_set_cal_mode
@@ -98,3 +102,9 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/maxfg/bypass_chargelimit_ops
     chown system system /sys/class/power_supply/maxfg_base/bypass_chargelimit_ops
     chown system system /sys/class/power_supply/max77779fg/bypass_chargelimit_ops
+
+    chown system system /sys/class/power_supply/battery/capacity_level_drain_sample_period
+    chown system system /sys/class/power_supply/battery/capacity_level_drain_rate_threshold
+    chown system system /sys/class/power_supply/battery/capacity_level_chg_speed_threshold
+    chown system system /sys/class/power_supply/battery/capacity_level_thermal_threshold
+    chown system system /sys/class/power_supply/battery/capacity_level_bd_threshold

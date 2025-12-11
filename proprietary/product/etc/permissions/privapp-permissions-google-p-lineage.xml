@@ -25,6 +25,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.deskclock">
       <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
       <permission name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
+      <permission name="android.permission.QUERY_USERS" />
     </privapp-permissions>
 
     <privapp-permissions package="com.android.angle">
@@ -33,13 +34,15 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <privapp-permissions package="com.google.android.aicore">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
-        <!-- TODO(b/280571559): PACKAGE_USAGE_STATS and REAL_GET_TASKS should be removed once we
-        have an explicit permission to query the foreground state of just the calling app. -->
+        <permission name="android.permission.MANAGE_VIRTUAL_MACHINE"/>
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
-        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <!-- Added in 24Q3 release -->
         <permission name="android.permission.USE_ON_DEVICE_INTELLIGENCE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <!-- Added in 25Q4 release -->
+        <permission name="android.permission.GET_BINDING_UID_IMPORTANCE"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.nbu.files">
@@ -74,6 +77,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.internal.betterbug">
@@ -139,6 +144,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.restore">
+        <permission name="android.permission.ACCESS_LAUNCHER_DATA"/>
         <permission name="android.permission.BACKUP"/>
         <permission name="android.permission.MANAGE_USB"/>
         <permission name="android.permission.MANAGE_USERS"/>
@@ -208,6 +214,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="com.google.android.apps.stargate.permission.SEND_NON_EMERGENCY_INTENTS"/>
         <permission name="com.google.android.apps.stargate.permission.END_NON_EMERGENCY_INTENTS"/>
         <permission name="com.google.android.apps.stargate.endpointservice.ACCESS_ENDPOINT_SERVICE"/>
+        <permission name="com.google.android.modem.pms.permission.USE_MODEM_SERVICE"/>
+        <permission name="com.google.android.modem.pms.permission.ACCESS_DEBUG"/>
         <permission name="com.google.android.permission.USE_GRIL"/>
         <permission name="com.google.android.rilextension.permission.REPORT_RIL_ISSUE"/>
         <permission name="com.google.pixel.iwlan.permission.RESTART_IWLAN"/>
@@ -420,6 +428,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
         <permission name="android.permission.GET_APP_OPS_STATS"/>
+        <permission name="android.permission.HIDE_STATUS_BAR_NOTIFICATION"/>
         <permission name="android.permission.INSTALL_PACKAGES"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.LOADER_USAGE_STATS"/>
@@ -487,6 +496,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
         <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
+        <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.SET_WALLPAPER_DIM_AMOUNT"/>
@@ -543,6 +553,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_SECURE_LOCK_DEVICE"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="android.permission.GET_APP_OPS_STATS"/>
+        <permission name="android.permission.GET_ROLE_HOLDERS" />
         <permission name="android.permission.INSTALL_LOCATION_TIME_ZONE_PROVIDER_SERVICE" />
         <permission name="android.permission.INTENT_FILTER_VERIFICATION_AGENT"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
@@ -551,6 +562,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.LOCATION_BYPASS"/>
         <permission name="android.permission.LOCATION_HARDWARE"/>
         <permission name="android.permission.LOCK_DEVICE"/>
+	<permission name="android.permission.LOG_COMPAT_CHANGE"/>
         <permission name="android.permission.MANAGE_ADVANCED_PROTECTION_MODE" />
         <permission name="android.permission.MANAGE_DEVICE_ADMINS"/>
         <permission name="android.permission.MANAGE_FACTORY_RESET_PROTECTION" />
@@ -575,6 +587,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.NOTIFY_PENDING_SYSTEM_UPDATE"/>
         <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"/>
+        <permission name="android.permission.OBSERVE_ROLE_HOLDERS"/>
         <permission name="android.permission.OVERRIDE_WIFI_CONFIG"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.PREPARE_FACTORY_RESET"/>
@@ -582,6 +595,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.PROVIDE_REMOTE_CREDENTIALS"/>
         <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE" />
         <permission name="android.permission.PROVIDE_TRUST_AGENT"/>
+	<permission name="android.permission.READ_COMPAT_CHANGE_CONFIG"/>
         <permission name="android.permission.READ_DREAM_STATE"/>
         <permission name="android.permission.READ_DROPBOX_DATA"/>
         <permission name="android.permission.READ_INTRUSION_DETECTION_STATE" />
@@ -641,6 +655,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
         <permission name="android.permission.GET_APP_OPS_STATS"/>
+        <permission name="android.permission.GET_ROLE_HOLDERS" />
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.MANAGE_DEVICE_ADMINS"/>
         <permission name="android.permission.MANAGE_FACTORY_RESET_PROTECTION" />
@@ -648,6 +663,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"/>
+        <permission name="android.permission.OBSERVE_ROLE_HOLDERS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.READ_DREAM_STATE"/>
         <permission name="android.permission.RESET_PASSWORD"/>
@@ -695,7 +711,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CAPTURE_MEDIA_OUTPUT"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE" />
         <permission name="android.permission.ENTER_CAR_MODE_PRIORITIZED" />
-        <permission name="android.permission.GLOBAL_SEARCH"/>
         <deny-permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
         <permission name="android.permission.MANAGE_SOUND_TRIGGER"/>
@@ -948,6 +963,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MASTER_CLEAR"/>
         <!-- To launch the bluetooth settings page -->
         <permission name="android.permission.BLUETOOTH_CONNECT" />
+        <!-- For Charger Service to get the USB status -->
+        <permission name="android.permission.MANAGE_USB" />
+        <!-- Used to start activities from background -->
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.nest.dockmanager.app">
@@ -990,5 +1009,14 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <privapp-permissions package="com.google.android.wallpaper.weathereffects">
         <permission name="android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.desktop.growth">
+        <!-- Used to get the list of users on the device for first full user targeting -->
+        <permission name="android.permission.MANAGE_USERS"/>
+        <!-- Used to show the nudge on top of all apps -->
+        <permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
+        <!-- Used to show notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
     </privapp-permissions>
 </permissions>

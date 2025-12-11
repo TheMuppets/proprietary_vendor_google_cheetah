@@ -18,3 +18,4 @@ on init
 
     # disable proactive compaction
     write /proc/sys/vm/compaction_proactiveness 0
+    write /proc/sys/vm/swappiness 60

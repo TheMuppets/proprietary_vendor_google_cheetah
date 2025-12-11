@@ -45,8 +45,6 @@ on init
 
     start vendor.keymaster-4-0
 
-    # ZRAM setup
-    write /sys/block/zram0/comp_algorithm lz77eh
     write /proc/sys/vm/page-cluster 0
 
     # Some user code relies on ro.boot.hardware.revision
@@ -317,6 +315,10 @@ on post-fs-data
     # Compatibility path for TPU
     symlink /dev/janeiro /dev/edgetpu
 
+on load_persist_props_action
+    # ZRAM setup
+    write /sys/block/zram0/comp_algorithm ${persist.device_config.vendor_system_native_boot.comp_algorithm:-lz77eh}
+
 
 on zygote-start
     # For PixelLogger configuration file.
@@ -583,7 +585,6 @@ on property:init.svc.vendor.charger=running
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.${ro.board.platform}
-    write /proc/sys/vm/swappiness 60
 
     # Adjust watermark level
     write /proc/sys/vm/watermark_scale_factor 200
@@ -780,24 +781,6 @@ on post-fs-data
     # Thermal Residency Stats (write 1 to reset)
     chown system system /sys/kernel/metrics/thermal/tr_by_group/tmu/stats_reset
     chown system system /sys/kernel/metrics/thermal/tr_by_group/spmic/stats_reset
-
-on property:vendor.brownout.mitigation.ready=1
-    # BCL
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/tpu_light_clk_ratio 0x80041c3 #DFS
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/cpu1_heavy_clk_ratio 0xfff041c0 #DFS
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/cpu2_heavy_clk_ratio 0xfff041c0 #DFS
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/gpu_light_clk_ratio 0xfff041c3 #DFS
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/cpu2_light_clk_ratio 0xfff041c3 #OCP
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/gpu_heavy_clk_ratio 0xfff04385 #OCP
-    write /sys/devices/virtual/pmic/mitigation/clock_ratio/tpu_heavy_clk_ratio 0xfff041c1 #OCP
-    write /sys/devices/virtual/pmic/mitigation/triggered_lvl/uvlo1_lvl 3200
-    write /sys/devices/virtual/pmic/mitigation/triggered_lvl/smpl_lvl 3100
-    write /sys/devices/virtual/pmic/mitigation/triggered_lvl/uvlo2_lvl 3000
-    write /sys/devices/virtual/pmic/mitigation/triggered_lvl/soft_ocp_cpu2_lvl 12000
-    write /sys/devices/virtual/pmic/mitigation/clock_div/tpu_clk_div 0x1
-    write /sys/devices/virtual/pmic/mitigation/clock_div/gpu_clk_div 0x81 #mask VDROOP1
-    write /sys/devices/virtual/pmic/mitigation/clock_div/cpu1_clk_div 0x381
-    write /sys/devices/virtual/pmic/mitigation/clock_div/cpu2_clk_div 0x1
 
 on property:vendor.thermal.link_ready=1
     # Thermal

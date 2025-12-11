@@ -11,6 +11,7 @@ service vendor.vibrator.cs40l26 /vendor/bin/hw/android.hardware.vibrator-service
         calibration/f0_stored
         calibration/redc_stored
         calibration/q_stored
+        calibration/dvl_peq_coefficients
         default/vibe_state
         default/num_waves
         default/braking_time_bank
