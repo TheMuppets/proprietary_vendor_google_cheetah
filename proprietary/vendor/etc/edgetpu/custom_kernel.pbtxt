@@ -1,0 +1,8 @@
+# proto-file: platforms/darwinn/compiler/custom_kernel/custom_kernel_database.proto
+# proto-message: CustomKernelDatabase
+
+kernel {
+  name: "cwise_add_2d"
+  description: "2D cwise add compute"
+  file_path: "google3/platforms/darwinn/compiler/custom_kernel/kernel_content/tests/cwise_add_2d.mlir"
+}

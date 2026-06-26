@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The values here are chosen to be applicable to 12GB and 16GB devices. -->
+<MemoryLimiterConfig>
+  <version>1</version>
+  <configList>
+    <limitSet>
+      <!-- Limits for a phone with at least 14G of ram: 8G/4G/4G/4G -->
+      <minimumRequiredMemTotal>14336</minimumRequiredMemTotal>
+      <memVisible>8192</memVisible>
+      <memNotVisible>4096</memNotVisible>
+      <swapVisible>4096</swapVisible>
+      <swapNotVisible>4096</swapNotVisible>
+    </limitSet>
+    <limitSet>
+      <!-- Limits for a phone with at least 10G of ram: 6G/3G/3G/3G -->
+      <minimumRequiredMemTotal>10240</minimumRequiredMemTotal>
+      <memVisible>6144</memVisible>
+      <memNotVisible>3072</memNotVisible>
+      <swapVisible>3072</swapVisible>
+      <swapNotVisible>3072</swapNotVisible>
+    </limitSet>
+  </configList>
+</MemoryLimiterConfig>

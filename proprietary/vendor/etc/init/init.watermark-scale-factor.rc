@@ -1,0 +1,4 @@
+
+on property:sys.boot_completed=1
+    # Adjust watermark level
+    write /proc/sys/vm/watermark_scale_factor 200

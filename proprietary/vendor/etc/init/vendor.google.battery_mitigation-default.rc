@@ -11,9 +11,17 @@ on property:vendor.all.modules.ready=1
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/uvlo2_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo1_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo2_triggered
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/oilo3_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_state/smpl_triggered
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_usb_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_wlc_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_usb_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_wlc_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo3_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo3_usb_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo3_wlc_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_cpu1_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_cpu2_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/ocp_gpu_lvl
@@ -31,8 +39,11 @@ on property:vendor.all.modules.ready=1
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/smpl_det
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/uvlo1_det
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_det/uvlo2_det
+    chown system system /sys/devices/virtual/pmic/mitigation/debounce_time/batoilo1_det
     chown system system /sys/devices/virtual/pmic/mitigation/debounce_time/batoilo2_det
+    chown system system /sys/devices/virtual/pmic/mitigation/debounce_time/batoilo3_det
     chown system system /sys/devices/virtual/pmic/mitigation/instruction/dvfs_ramp_enable
+    chown system system /sys/devices/virtual/pmic/mitigation/userspace/throttle_state
     start vendor.battery_mitigation
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,if,otg && property:sys.boot.reason=reboot,uvlo,pmic,if,otg
@@ -61,6 +72,15 @@ on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp2,pmic,if && property:sys.boot.reason=reboot,ocp2,pmic,if
     setprop vendor.brownout_reason "ocp2,pmic,if"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp3,pmic,if,otg && property:sys.boot.reason=reboot,ocp3,pmic,if,otg
+    setprop vendor.brownout_reason "ocp3,pmic,if,otg"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp3,pmic,if,usb && property:sys.boot.reason=reboot,ocp3,pmic,if,usb
+    setprop vendor.brownout_reason "ocp3,pmic,if,usb"
+
+on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,ocp3,pmic,if && property:sys.boot.reason=reboot,ocp3,pmic,if
+    setprop vendor.brownout_reason "ocp3,pmic,if"
 
 on property:vendor.all.modules.ready=1 && property:ro.boot.bootreason=reboot,uvlo,pmic,main && property:sys.boot.reason=reboot,uvlo,pmic,main
     setprop vendor.brownout_reason "uvlo,pmic,main"

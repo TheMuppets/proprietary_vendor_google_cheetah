@@ -1,0 +1,3 @@
+on boot
+    exec_background u:r:gpuflag:s0 -- /vendor/bin/gpuflag
+

@@ -1,7 +1,5 @@
 on post-fs-data
     mkdir /data/vendor/chre 0770 context_hub context_hub
-on boot
-    setprop vendor.chre.multiclient_hal.enabled true
 
 service vendor.contexthub-default /vendor/bin/hw/android.hardware.contexthub-service.generic
     class hal late_start

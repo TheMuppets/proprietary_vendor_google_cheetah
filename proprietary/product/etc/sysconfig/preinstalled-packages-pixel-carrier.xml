@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2025 Google Inc.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. -->
+<config>
+    <!-- Tethering Entitlement (TetheringEntitlement) -->
+    <install-in-user-type package="com.google.android.tetheringentitlement">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- Carrier Setup (CarrierSetup) -->
+    <install-in-user-type package="com.google.android.carriersetup">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- Google Wi-Fi Provisioner app (CarrierWiFi) -->
+    <install-in-user-type package="com.google.android.apps.carrier.carrierwifi">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- WFC Activation (WfcActivation) -->
+    <install-in-user-type package="com.google.android.wfcactivation">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+
+    <!-- Adaptive Connectivity Services (SCONE) -->
+    <install-in-user-type package="com.google.android.apps.scone">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="android.os.usertype.profile.MANAGED" />
+    </install-in-user-type>
+
+    <!-- OMADM Service (DMService) -->
+    <install-in-user-type package="com.android.omadm.service">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- OMADM Trigger (OemDmTrigger) -->
+    <install-in-user-type package="com.google.omadm.trigger">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- OMADM ConnMO Plugin (ConnMO) -->
+    <install-in-user-type package="com.android.sdm.plugins.connmo">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- OMADM DCMO Plugin (DCMO) -->
+    <install-in-user-type package="com.android.sdm.plugins.dcmo">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- OMADM DiagMon Plugin (DiagMon) -->
+    <install-in-user-type package="com.android.sdm.plugins.diagmon">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <!-- Google eSIM Manager (EuiccGoogle) -->
+    <install-in-user-type package="com.google.android.euicc">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <!-- NFC/eSE/eSIM firmware updater (EuiccSupportPixel) -->
+    <install-in-user-type package="com.google.euiccpixel">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <!-- NFC/eSE/eSIM firmware updater Permissions (EuiccSupportPixelPermissions) -->
+    <install-in-user-type package="com.google.euiccpixel.permissions">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+</config>

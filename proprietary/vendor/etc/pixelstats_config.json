@@ -70,5 +70,14 @@
   ],
   "TotalCallCountPath": "/sys/devices/platform/audiometrics/call_count",
   "AudioUevent": "/devices/virtual/amcs/amcs",
-  "TypeCPartnerUevent": "PRODUCT_TYPE="
+  "TypeCPartnerUevent": "PRODUCT_TYPE=",
+  "FGRegDumpPath": [
+    "/sys/class/power_supply/maxfg/registers_dump",
+    "/sys/class/power_supply/max77779fg/registers_dump",
+    "/sys/class/power_supply/maxfg_base/registers_dump",
+    "/sys/class/power_supply/maxfg_secondary/registers_dump"
+  ],
+  "FGAbnlPath": [
+    "/dev/logbuffer_maxfg_secondary_monitor"
+  ]
 }

@@ -330,3 +330,5 @@ on property:sys.boot_completed=1
     write /proc/vendor_sched/boost_at_fork_value 768
     write /proc/vendor_sched/boost_at_fork_duration 1000
 
+    # Set rate limit for sched group tracker ftrace events
+    write /proc/vendor_sched/sched_group_tracker_rate_limit 100

@@ -19,3 +19,19 @@ on init
     # disable proactive compaction
     write /proc/sys/vm/compaction_proactiveness 0
     write /proc/sys/vm/swappiness 60
+
+# b/454519871: Workaround to get block_queue_depth.
+# TODO(richardycc): Remove this once the sepolicy 202604 is applied.
+service block_queue_depth /vendor/bin/hw/block_queue_depth
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start block_queue_depth
+    write /sys/kernel/vendor_mm/filemap/async_readahead_adj_enable 1
+
+on property:vendor.zram.nr_tags=*
+    setprop mmd.zram.writeback.nr_tags ${vendor.zram.nr_tags}

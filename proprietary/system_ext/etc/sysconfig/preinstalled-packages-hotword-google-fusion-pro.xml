@@ -1,0 +1,11 @@
+<config>
+    <!--  Hotword OK Google Enrollment app (HotwordEnrollmentOKGoogleFUSIONPro) -->
+    <install-in-user-type package="com.android.hotwordenrollment.okgoogle">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+
+    <!--  Hotword X Google Enrollment app (HotwordEnrollmentOKGoogleFUSIONPro) -->
+    <install-in-user-type package="com.android.hotwordenrollment.xgoogle">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+</config>

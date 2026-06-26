@@ -7,3 +7,11 @@ service vendor.camera-provider-2-7-google /apex/com.google.pixel.camera.hal/bin/
     rlimit rtprio 10 10
     task_profiles CameraServiceCapacity CameraServicePerformance
     rlimit memlock 268435456 268435456
+
+on property:vendor.camera.hal.restart=true && property:ro.debuggable=1
+    restart vendor.camera-provider-2-7-google
+    setprop vendor.camera.hal.restart ""
+
+on property:vendor.camera.hal.restart=1 && property:ro.debuggable=1
+    restart vendor.camera-provider-2-7-google
+    setprop vendor.camera.hal.restart ""

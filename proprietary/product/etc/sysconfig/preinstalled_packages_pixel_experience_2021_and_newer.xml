@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- User type configuration for packages to preinstall in pixel 2021 and newer devices, per user type,
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <!-- Now Playing  -->
+    <install-in-user-type package="com.google.android.apps.pixel.nowplaying">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+
+    <!-- Pixel Relationships (RELEASE_PACKAGE_PIXEL_RELATIONSHIPS) -->
+    <install-in-user-type package="com.google.android.apps.pixel.relationships">
+        <install-in user-type="FULL" />
+        <install-in user-type="android.os.usertype.profile.MANAGED" />
+        <install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+
+    <!-- Pixel customization bundle (RELEASE_PACKAGE_PIXEL_CUSTOMIZATION_PACKS) -->
+    <install-in-user-type package="com.google.android.apps.pixel.customizationbundle">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+
+    <!-- Voice Access Accessibility Service (VoiceAccessPrebuilt) -->
+    <install-in-user-type package="com.google.android.apps.accessibility.voiceaccess">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+
+    <!--  GLES driver implemented on top of Vulkan and developer option setting menu to configure app to use it (ANGLE) -->
+    <install-in-user-type package="com.android.angle">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+</config>

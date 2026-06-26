@@ -1,0 +1,8 @@
+<config>
+    <!-- Verizon APNLib (VZWAPNLib) -->
+    <install-in-user-type package="com.vzw.apnlib">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+</config>

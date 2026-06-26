@@ -20,3 +20,10 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
     chown system system /sys/class/power_supply/wireless/device/fwupdate_data
     chown system system /sys/class/power_supply/wireless/device/compatibility
     chown system system /sys/class/power_supply/wireless/device/qispec
+    chown system system /sys/class/power_supply/wireless/device/qiid
+    chown system system /sys/class/power_supply/wireless/device/maxpower
+    chown system system /sys/class/power_supply/wireless/device/negopower
+    chown system system /sys/class/power_supply/wireless/device/txlimitreason
+
+on property:sys.retaildemo.enabled=1
+    write /sys/class/power_supply/wireless/device/features 0:20

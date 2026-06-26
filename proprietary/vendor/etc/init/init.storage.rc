@@ -1,3 +1,8 @@
+service backup_ota_log /system_ext/bin/backup_ota_log.sh
+    user root
+    disabled
+    oneshot
+
 on init
     # Make foreground and background I/O priority different. none-to-rt was
     # introduced in kernel 5.14. promote-to-rt was introduced in kernel 6.5.
@@ -67,7 +72,14 @@ on property:sys.boot_completed=1
     chown system system /dev/sys/fs/by-name/userdata/peak_atomic_write
     chown system system /dev/sys/fs/by-name/userdata/revoked_atomic_block
 
+    write /dev/sys/block/by-name/rootdisk/queue/iostats 1
+    write /dev/sys/block/by-name/rootdisk/queue/read_ahead_kb 128
+    write /dev/sys/block/by-name/userdata/queue/read_ahead_kb 128
+
     trigger default_storage_mode
+
+on property:sys.shutdown.requested=*
+    start backup_ota_log
 
 on charger
     trigger default_storage_mode
@@ -76,13 +88,4 @@ on property:ro.boot.mode=charger && property:init.svc.vendor.charger=running
     trigger default_storage_mode
 
 on boot
-    # These settings must be applied during the 'on boot' stage.
-    # In Kernel 6.12, other sysfs writes in this stage can implicitly reset
-    # read_ahead_kb to 1024KB. Moving these here ensures they are applied
-    # AFTER those writes, guaranteeing our desired 128KB value and
-    # enabling iostats collection early.
-    write /dev/sys/block/by-name/rootdisk/queue/iostats 1
-    write /dev/sys/block/by-name/rootdisk/queue/read_ahead_kb 128
-    write /dev/sys/block/by-name/userdata/queue/read_ahead_kb 128
-
     mkdir /data/vendor/storage 0770 system system

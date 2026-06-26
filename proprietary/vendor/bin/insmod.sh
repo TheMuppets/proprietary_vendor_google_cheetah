@@ -66,6 +66,7 @@ else
 fi
 
 if [ -f $cfg_file ]; then
+  modules_loaded_16k=0
   while IFS="|" read -r action arg
   do
     case $action in
@@ -99,7 +100,12 @@ if [ -f $cfg_file ]; then
             arg="--all=${vendor_modules_dir}/modules.load" ;;
         esac
         if [[ "${pagesize}" == "16384" && -d "${mode_16k_modules_dir}" ]]; then
-          insmod ${mode_16k_modules_dir}/$arg
+          if [[ ${modules_loaded_16k} -eq 0 ]]; then
+            for f in "${mode_16k_modules_dir}"/*.ko; do
+              insmod "$f"
+            done
+            modules_loaded_16k=1
+          fi
         elif [[ -d "${modules_dir}" ]]; then
           modprobe -a -d "${modules_dir}" $arg
         fi

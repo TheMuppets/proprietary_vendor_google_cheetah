@@ -84,6 +84,7 @@ This XML file declares which platform apps that need to access internal APIs.
   <hidden-api-whitelisted-app package="com.google.android.sampledeviceowner" />
   <hidden-api-whitelisted-app package="com.google.android.apps.scone" />
   <hidden-api-whitelisted-app package="com.google.android.apps.pixel.dcservice" />
+  <hidden-api-whitelisted-app package="com.google.android.apps.pixel.launcherconnector" />
   <hidden-api-whitelisted-app package="com.google.android.apps.pixel.tabby" />
   <hidden-api-whitelisted-app package="com.google.android.sdksetup" />
   <hidden-api-whitelisted-app package="com.google.android.setupwizard" />

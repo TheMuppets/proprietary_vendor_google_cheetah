@@ -1,0 +1,10 @@
+service vendor.usboffmode /vendor/bin/hw/usboffmode
+    class charger
+    user system
+    group system shell wakelock
+    seclabel u:r:usboffmode:s0
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+
+on charger
+    chown root system /sys/class/typec/port0/select_usb_power_delivery
+    chmod 664 /sys/class/typec/port0/select_usb_power_delivery

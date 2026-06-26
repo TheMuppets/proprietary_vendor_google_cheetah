@@ -1,0 +1,9 @@
+# Storage related init service
+
+service storage_init /vendor/bin/storage_init.sh
+    user root
+    disabled
+    oneshot
+
+on boot
+    start storage_init

@@ -1,6 +1,6 @@
 <!--
     Input:
-        vendor/goodix/udfps/g7_trusty_v26_02_01_80/biometrics/fingerprint/aidl/g7_aidl_trusty/fingerprint-goodix.xml
+        vendor/goodix/udfps/g7_trusty/biometrics/fingerprint/aidl/g7_aidl_trusty/fingerprint-goodix.xml
 -->
 <manifest version="9.0" type="device">
     <hal format="aidl">

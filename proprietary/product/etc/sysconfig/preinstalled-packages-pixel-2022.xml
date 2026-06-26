@@ -1,0 +1,15 @@
+<config>
+    <!-- Android System Intelligence (DevicePersonalizationAiAiPrebuiltPixel2022) -->
+    <install-in-user-type package="com.google.android.as">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+
+    <!-- Private Compute Services (DeviceIntelligenceNetworkPrebuiltAstrea via DevicePersonalizationAiAiPrebuiltPixel2022) -->
+    <install-in-user-type package="com.google.android.as.oss">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+</config>

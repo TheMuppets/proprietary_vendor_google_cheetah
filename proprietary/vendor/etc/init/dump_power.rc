@@ -1,0 +1,3 @@
+on init
+    # Permission for USB controller power control
+    chown system system /sys/devices/platform/11210000.usb/power/control
