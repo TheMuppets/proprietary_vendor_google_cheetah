@@ -217,7 +217,8 @@ android_app_import {
     name: "NowPlayingPrebuilt",
     owner: "google",
     apk: "proprietary/product/app/NowPlayingPrebuilt/NowPlayingPrebuilt.apk",
-    certificate: "platform",
+    preprocessed: true,
+    presigned: true,
     dex_preopt: {
         enabled: false,
     },
