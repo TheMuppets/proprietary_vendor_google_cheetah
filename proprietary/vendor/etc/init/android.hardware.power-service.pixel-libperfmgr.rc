@@ -27,6 +27,9 @@ on property:vendor.powerhal.dalvik.vm.dex2oat-cpu-set=*
     setprop dalvik.vm.dex2oat-cpu-set ${vendor.powerhal.dalvik.vm.dex2oat-cpu-set}
     setprop dalvik.vm.restore-dex2oat-cpu-set ${vendor.powerhal.dalvik.vm.dex2oat-cpu-set}
 
+on property:vendor.powerhal.proc.sys.vm.compact_memory=1
+    write /proc/sys/vm/compact_memory ${vendor.powerhal.proc.sys.vm.compact_memory}
+
 # Restart powerHAL when debug property set
 on property:ro.debuggable=1 && property:vendor.powerhal.config.debug=*
     restart vendor.power-hal-aidl
@@ -34,5 +37,5 @@ on property:ro.debuggable=1 && property:vendor.powerhal.config.debug=*
 on property:persist.vendor.powerhal.config.debug=*
     setprop vendor.powerhal.config.debug ${persist.vendor.powerhal.config.debug}
 
-on late-fs-data
+on post-fs-data
     mkdir /data/vendor/powerhal 0700 root system

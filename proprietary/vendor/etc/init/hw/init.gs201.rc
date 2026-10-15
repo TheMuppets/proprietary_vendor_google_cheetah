@@ -19,6 +19,7 @@ on init
     write /sys/devices/system/cpu/cpuidle/current_governor teo
     # Disable util-awareness
     write /proc/vendor_sched/teo_util_threshold "1024 1024 1024"
+    write /proc/vendor_sched/task_placement_retry_count 0
 
     chown system system /sys/devices/system/cpu/cpufreq/policy0/sched_pixel/lcpi_threshold
     chown system system /sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold

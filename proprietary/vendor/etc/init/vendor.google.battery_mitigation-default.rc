@@ -16,6 +16,9 @@ on property:vendor.all.modules.ready=1
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_usb_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo_wlc_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo1_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo1_usb_lvl
+    chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo1_wlc_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_usb_lvl
     chown system system /sys/devices/virtual/pmic/mitigation/triggered_lvl/batoilo2_wlc_lvl

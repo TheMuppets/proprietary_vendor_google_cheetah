@@ -78,8 +78,10 @@ on property:vendor.all.modules.ready=1 && property:vendor.all.devices.ready=1
 
     chown system system /sys/devices/platform/google,charger/charge_start_level
     chown system system /sys/devices/platform/google,charger/charge_stop_level
+    chown system system /sys/devices/platform/google,charger/dwell_state
     chown system system /sys/devices/platform/soc/soc:google,charger/charge_start_level
     chown system system /sys/devices/platform/soc/soc:google,charger/charge_stop_level
+    chown system system /sys/devices/platform/soc/soc:google,charger/dwell_state
 
     chown system system /sys/devices/platform/google,charger/dd_charge_start_level
     chown system system /sys/devices/platform/google,charger/dd_charge_stop_level

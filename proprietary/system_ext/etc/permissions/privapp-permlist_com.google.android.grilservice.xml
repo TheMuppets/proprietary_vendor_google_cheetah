@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2025 Google Inc. All Rights Reserved. -->
+<permissions>
+    <privapp-permissions package="com.google.android.grilservice">
+        <!-- Used by SconeNetworkAgent Feature. -->
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    </privapp-permissions>
+</permissions>

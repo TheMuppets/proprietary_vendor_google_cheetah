@@ -1,5 +1,5 @@
 
-transatel_frƒ„»ìž
+transatel_frƒ¬‘¦¦
 Internet
 mobiledata"D
 cellular_usage_setting_int"

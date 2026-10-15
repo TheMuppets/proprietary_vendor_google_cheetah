@@ -1,5 +1,5 @@
 
-vodafone_ck„»ìI
+vodafone_ck¬‘¦¦I
 internetinternetpx
 imsims"14|20px
 xcapxcappx"·L

@@ -37,16 +37,10 @@ on early-boot
     # audio_source function
     mkdir /config/usb_gadget/g1/functions/audio_source.gs3
 
-    # rndis function
-    mkdir /config/usb_gadget/g1/functions/rndis.gs4
-    # Modify class/subclass/protocol for rndis.gs4
-    # Remote NDIS: Class: Wireless Controller (0xe0), Subclass: 0x1, Protocol: 0x3
-    write /config/usb_gadget/g1/functions/rndis.gs4/class e0
-    write /config/usb_gadget/g1/functions/rndis.gs4/subclass 01
-    write /config/usb_gadget/g1/functions/rndis.gs4/protocol 03
-    write /config/usb_gadget/g1/functions/rndis.gs4/os_desc/interface.ncm/compatible_id RNDIS
-    write /config/usb_gadget/g1/functions/rndis.gs4/ifname rndis%d
-    setprop vendor.usb.rndis.config rndis.gs4
+    # reverse ncm function
+    mkdir /config/usb_gadget/g1/functions/ncm.gs4
+    write /config/usb_gadget/g1/functions/ncm.gs4/os_desc/interface.ncm/compatible_id WINNCM
+    write /config/usb_gadget/g1/functions/ncm.gs4/ifname usb%d
 
     # midi function
     mkdir /config/usb_gadget/g1/functions/midi.gs5
@@ -268,6 +262,15 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/mtp.gs0/os_desc/interface.MTP
     chown system system /config/usb_gadget/g1/functions/mtp.gs0/os_desc/interface.MTP/compatible_id
     chown system system /config/usb_gadget/g1/functions/mtp.gs0/os_desc/interface.MTP/sub_compatible_id
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/dev_addr
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/host_addr
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/ifname
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/os_desc
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/os_desc/interface.ncm
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/os_desc/interface.ncm/compatible_id
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/os_desc/interface.ncm/sub_compatible_id
+    chown system system /config/usb_gadget/g1/functions/ncm.gs4/qmult
     chown system system /config/usb_gadget/g1/functions/ncm.gs9
     chown system system /config/usb_gadget/g1/functions/ncm.gs9/dev_addr
     chown system system /config/usb_gadget/g1/functions/ncm.gs9/host_addr
@@ -282,18 +285,6 @@ on early-boot
     chown system system /config/usb_gadget/g1/functions/ptp.gs1/os_desc/interface.MTP
     chown system system /config/usb_gadget/g1/functions/ptp.gs1/os_desc/interface.MTP/compatible_id
     chown system system /config/usb_gadget/g1/functions/ptp.gs1/os_desc/interface.MTP/sub_compatible_id
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/class
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/dev_addr
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/host_addr
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/ifname
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/os_desc
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/os_desc/interface.rndis
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/os_desc/interface.rndis/compatible_id
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/os_desc/interface.rndis/sub_compatible_id
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/protocol
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/qmult
-    chown system system /config/usb_gadget/g1/functions/rndis.gs4/subclass
     chown system system /config/usb_gadget/g1/functions/uvc.0
     chown system system /config/usb_gadget/g1/functions/uvc.0/control
     chown system system /config/usb_gadget/g1/functions/uvc.0/control/bInterfaceNumber

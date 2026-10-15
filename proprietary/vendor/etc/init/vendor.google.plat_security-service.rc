@@ -1,0 +1,6 @@
+service hal_plat_security /vendor/bin/hw/vendor.google.plat_security-service
+    class hal
+    user system
+    group system
+    interface aidl vendor.google.plat_security.ISecureTimestamp/default
+    interface aidl vendor.google.plat_security.ITrustyDecrypt/default

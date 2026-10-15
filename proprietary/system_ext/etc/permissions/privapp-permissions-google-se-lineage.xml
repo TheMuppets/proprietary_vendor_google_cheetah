@@ -42,6 +42,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.android.settings">
         <permission name="android.permission.INSTALL_DYNAMIC_SYSTEM"/>
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
+        <permission name="android.permission.CONTROL_DEVICE_LIGHTS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.storagemanager">
@@ -88,6 +89,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.PERSONAL_CONTEXT_RECEIVE_INSIGHTS"/>
         <permission name="android.permission.PERSONAL_CONTEXT_HOST_INSIGHT_SURFACE"/>
         <permission name="android.permission.PERSONAL_CONTEXT_READ_SETTINGS"/>
+        <!-- Permission for on-device intelligence for home organizer -->
+        <permission name="android.permission.USE_ON_DEVICE_INTELLIGENCE"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.gsf">
@@ -174,6 +177,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.MANAGE_MULTIUSER_DEVICE_PROVISIONING_STATE"/>
+        <permission name="com.google.android.apps.restore.permission.INSTALL_SELECTED_APPS"/>
+        <permission name="vendor.google.desktop.permission.WRITE_VPD_ACTIVATE_DATE"/>
     </privapp-permissions>
 
 
@@ -297,6 +302,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE" />
         <permission name="android.permission.WRITE_SECURE_SETTINGS" />
         <permission name="android.permission.READ_WALLPAPER_INTERNAL" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.apps.aiclocks">
+        <permission name="android.permission.READ_WALLPAPER_INTERNAL" />
+        <!-- TODO(b/499746485): Swap with UPDATE_LOCKSCREEN_CLOCK_SETTINGS -->
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
     </privapp-permissions>
 
     <privapp-permissions package="com.android.multiuser">

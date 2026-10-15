@@ -1,6 +1,6 @@
 # override default log levels.
 on boot
-    setprop log.tag.GABC E
+    setprop log.tag.GABC I
 
 # backward-compatible system props.
 on property:persist.vendor.camera.gabc.debug_level=0

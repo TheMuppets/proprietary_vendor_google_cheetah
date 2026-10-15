@@ -1,6 +1,0 @@
-<config>
-  <!-- Google RIL Service (grilservice) -->
-  <install-in-user-type package="com.google.android.grilservice">
-      <install-in user-type="SYSTEM" />
-  </install-in-user-type>
-</config>

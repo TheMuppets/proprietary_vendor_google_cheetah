@@ -22,13 +22,14 @@ on default_storage_mode
     write /dev/sys/fs/by-name/userdata/max_io_bytes 524288
     write /dev/sys/fs/by-name/userdata/min_hot_blocks 0
 
+    # Priority
+    write /dev/sys/fs/by-name/userdata/adjust_lock_priority 32
+    write /dev/sys/fs/by-name/userdata/critical_task_priority 100
+
     # Block
     write /dev/sys/block/by-name/rootdisk/queue/nr_requests 128
     write /dev/sys/block/by-name/rootdisk/queue/rq_affinity 2
     write /dev/sys/block/by-name/zoned_device/queue/rq_affinity 2
-
-    # UFS
-    write /dev/sys/block/bootdevice/clkgate_enable 1
 
 on init
     # Symlink /dev/sys/block/bootdevice
@@ -45,7 +46,6 @@ on init
     write /dev/sys/block/by-name/rootdisk/queue/nr_requests 256
 
     # UFS
-    write /dev/sys/block/bootdevice/clkgate_enable 0
     write /dev/sys/block/bootdevice/wb_on 0
     write /dev/sys/block/bootdevice/enable_wb_buf_flush 0
 
@@ -89,3 +89,27 @@ on property:ro.boot.mode=charger && property:init.svc.vendor.charger=running
 
 on boot
     mkdir /data/vendor/storage 0770 system system
+
+on init && property:ro.boot.hardware.platform=gs101
+    write /dev/sys/block/bootdevice/clkgate_enable 0
+
+on init && property:ro.boot.hardware.platform=gs201
+    write /dev/sys/block/bootdevice/clkgate_enable 0
+
+on init && property:ro.boot.hardware.platform=zuma
+    write /dev/sys/block/bootdevice/clkgate_enable 0
+
+on init && property:ro.boot.hardware.platform=zumapro
+    write /dev/sys/block/bootdevice/clkgate_enable 0
+
+on default_storage_mode && property:ro.boot.hardware.platform=gs101
+    write /dev/sys/block/bootdevice/clkgate_enable 1
+
+on default_storage_mode && property:ro.boot.hardware.platform=gs201
+    write /dev/sys/block/bootdevice/clkgate_enable 1
+
+on default_storage_mode && property:ro.boot.hardware.platform=zuma
+    write /dev/sys/block/bootdevice/clkgate_enable 1
+
+on default_storage_mode && property:ro.boot.hardware.platform=zumapro
+    write /dev/sys/block/bootdevice/clkgate_enable 1

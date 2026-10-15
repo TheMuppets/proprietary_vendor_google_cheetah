@@ -5,6 +5,9 @@
 &
 test001_amarisoft
 00101"ABCD2025
+$
+amarisoft_satellite
+00101"52FF
 
 
 test001_zz
@@ -44,6 +47,9 @@ telekom_gr
 
 enreach_nl
 20403
+.
+truphonemvno_zz
+20404"314747454E45524943
 *
 truphone_zz
 20404"547275554B3030656E
@@ -91,6 +97,9 @@ HOT MOBILE
 
 tcl_nl
 20407
+.
+truphonemvno_zz
+20408"314747454E45524943
 *
 truphone_zz
 20408"547275554B3030656E
@@ -158,6 +167,9 @@ tmobile_nl
 0
 1global_bootstrap
 20433"31472D47474C454254
+.
+truphonemvno_zz
+20433"314747454E45524943
 *
 truphone_zz
 20433"547275554B3030656E
@@ -298,6 +310,9 @@ rakuten_jp
 0
 1global_bootstrap
 20809"31472D47474C454254
+.
+truphonemvno_zz
+20809"314747454E45524943
 *
 truphone_zz
 20809"547275554B3030656E
@@ -355,6 +370,9 @@ rakuten_jp
 
 sfr_fr
 20810
+.
+truphonemvno_zz
+20812"314747454E45524943
 *
 truphone_zz
 20812"547275554B3030656E
@@ -635,6 +653,9 @@ $
 lycamobile_es
 21425
 Lycamobile
+.
+truphonemvno_zz
+21427"314747454E45524943
 *
 truphone_zz
 21427"547275554B3030656E
@@ -1000,6 +1021,9 @@ sunrise_ch
 
 netplus_ch
 22874
+.
+truphonemvno_zz
+22876"314747454E45524943
 
 
 tmobile_cz
@@ -1105,6 +1129,9 @@ $
 
 23408GID1=B2
 23408"B2
+.
+truphonemvno_zz
+23410"314747454E45524943
 *
 truphone_zz
 23410"547275554B3030656E
@@ -1151,6 +1178,9 @@ $
 
 gigs_gb
 23415"22
+
+aomobile_gb
+23415"34
 
 23415GID1=70
 23415"70
@@ -1169,6 +1199,9 @@ $
 ,
 23415SPN=SAINSBURY'S
 23415SAINSBURY'S
+!
+aomobile_gb
+23415	AO Mobile
 
 	esimgo_gb
 23415eSIM Go
@@ -1202,6 +1235,9 @@ $
 0
 1global_bootstrap
 23425"31472D47474C454254
+.
+truphonemvno_zz
+23425"314747454E45524943
 *
 truphone_zz
 23425"547275554B3030656E
@@ -1521,6 +1557,9 @@ telavox_se
 
 google5glab_tw
 24099
+
+naf2_no
+24201"30
 .
 24201IMSI=24201700XXXXXXX
 2420124201700
@@ -1721,6 +1760,9 @@ $
 lycamobile_pl
 26009
 Lycamobile
+.
+truphonemvno_zz
+26033"314747454E45524943
 *
 truphone_zz
 26033"547275554B3030656E
@@ -1800,6 +1842,9 @@ sipgate_de
 
 mtel_de
 26225
+.
+truphonemvno_zz
+26242"314747454E45524943
 *
 truphone_zz
 26242"547275554B3030656E
@@ -1913,6 +1958,12 @@ LycaMobile
 
 sky_ie
 27225Sky IE
+.
+truphonemvno_zz
+27227"314747454E45524943
+*
+truphone_zz
+27227"547275554B3030656E
 
 	siminn_is
 27401
@@ -2173,15 +2224,6 @@ popcorn_us
 #
 ssimobile_ca
 302480	302480017
-
-shaw_ca
-302490"53
-
-shaw_ca
-302490	302490400
-
-shaw_ca
-302490	302490500
 
 freedommobile_ca
 302490
@@ -2947,8 +2989,8 @@ att5gsa_us
 
 att5g_us
 310280"53FF
-!
-310410GID1=60FF
+"
+defensemobile_us
 310280"60FF
 
 attmvnos_us
@@ -2998,6 +3040,9 @@ att5gsa_us
 
 att_us
 310280
+/
+truphonemvno_zz
+310300"314747454E45524943
 +
 truphone_us
 310300"547275554B3030656E
@@ -3103,8 +3148,8 @@ att5gsa_us
 
 att5g_us
 310410"53FF
-!
-310410GID1=60FF
+"
+defensemobile_us
 310410"60FF
 
 attmvnos_us
@@ -3211,6 +3256,12 @@ xfinity_us
 )
 xfinity2_us
 310590"BA01640000000000
+,
+fi_extended_us
+310590"BA01770000000000
+)
+visiblev_us
+310590"BAE2000000000000
 
 
 verizon_us
@@ -3225,27 +3276,51 @@ xfinity_us
 )
 xfinity2_us
 310591"BA01640000000000
+,
+fi_extended_us
+310591"BA01770000000000
 0
 tracfoneverizon_us
 310592"BA01270000000000
+,
+fi_extended_us
+310592"BA01770000000000
 0
 tracfoneverizon_us
 310593"BA01270000000000
+,
+fi_extended_us
+310593"BA01770000000000
 0
 tracfoneverizon_us
 310594"BA01270000000000
+,
+fi_extended_us
+310594"BA01770000000000
 0
 tracfoneverizon_us
 310595"BA01270000000000
+,
+fi_extended_us
+310595"BA01770000000000
 0
 tracfoneverizon_us
 310596"BA01270000000000
+,
+fi_extended_us
+310596"BA01770000000000
 0
 tracfoneverizon_us
 310597"BA01270000000000
+,
+fi_extended_us
+310597"BA01770000000000
 0
 tracfoneverizon_us
 310598"BA01270000000000
+,
+fi_extended_us
+310598"BA01770000000000
 0
 tracfoneverizon_us
 310599"BA01270000000000
@@ -3254,8 +3329,20 @@ xfinity_us
 xfinity_us
 310599"BA01450000000000
 )
+spectrum_us
+310599"BA01490000000000
+$
+cox_us
+310599"BA01570000000000
+)
 xfinity2_us
 310599"BA01640000000000
+)
+mediacom_us
+310599"BA01700000000000
+,
+fi_extended_us
+310599"BA01770000000000
 
 
 verizon_us
@@ -3318,8 +3405,9 @@ tmobile_us
 
 310880
 310880
-
-310890
+
+
+verizon_us
 310890
 *
 310900SPN=MIDRIVERS
@@ -3677,6 +3765,12 @@ $
 )
 mediacom_us
 311480"BA01700000000000
+5
+verizon_generic_mvno_us
+311480"BA01750000000000
+,
+fi_extended_us
+311480"BA01770000000000
 (
 
 visible_us
@@ -5407,11 +5501,11 @@ cheers2_in
 
 jazz_pk
 41001
-
-41003
+
+ufone_pk
 41003
-
-41004
+
+zong_pk
 41004
 
 
@@ -5653,12 +5747,6 @@ ooredoo_qa
 
 vodafone_qa
 42702
-
-ondo_mn
-428334283399
-
-ondo_mn
-42833ONDO
 
 ondo_mn
 42833
@@ -5671,8 +5759,9 @@ ooredoo_qa
 
 42898
 42898
-
-42899
+
+
+mobicom_mn
 42899
 
 42901
@@ -5867,6 +5956,9 @@ viettel_vn
 
 45208
 45208
+.
+truphonemvno_zz
+45400"314747454E45524943
 *
 truphone_zz
 45400"547275554B3030656E
@@ -5894,6 +5986,9 @@ webbing_hk
 
 smartone_hk
 45406
+.
+truphonemvno_zz
+45408"314747454E45524943
 *
 truphone_zz
 45408"547275554B3030656E
@@ -6139,6 +6234,9 @@ Lycamobile
 0
 1global_bootstrap
 50538"31472D47474C454254
+.
+truphonemvno_zz
+50538"314747454E45524943
 *
 truphone_zz
 50538"547275554B3030656E
@@ -6367,8 +6465,8 @@ starhub_sg
 #
 vodafone_pf
 54715Vodafone PF
-
-54720
+
+onati_pf
 54720
 
 vodafone_ck
@@ -7187,6 +7285,12 @@ webbing_hk
 
 72454
 72454
+.
+truphonemvno_zz
+72455"314747454E45524943
+*
+truphone_zz
+72455"547275554B3030656E
  
 brisanet_br
 72477Brisanet
@@ -10689,4 +10793,4 @@ teleena_zz
 999998
 
 pn_xx
-999999Åˆ»ìž" ÐÏÎ
+999999Î°‘¦¦"´—°Ó
